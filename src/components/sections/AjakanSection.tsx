@@ -45,55 +45,66 @@ export function AjakanSection() {
 
           {/* Desktop Phone Mockups (x:760 top:60 and x:960 top:110, clipped at bottom by card overflow-hidden) */}
           <div className="hidden lg:block">
-            {/* Phone 1: x: 760, y: 60 */}
-            <div className="absolute left-[760px] top-[60px] w-[246px] h-[514px] rounded-[33px] bg-[#0a1412] p-2 shadow-[0_30px_60px_rgba(0,0,0,0.25)] z-0">
-              <div className="relative w-[230px] h-[498px] rounded-[26px] overflow-hidden bg-black">
-                <Image
-                  src="/images/hp-screen-1.png"
-                  alt="Sissi Kasir Mobile"
-                  fill
-                  className="object-cover"
-                  sizes="230px"
-                />
+            {/* Phone 1: Kasir */}
+            <div className="absolute left-[760px] top-[60px] w-[246px] h-[514px] rounded-[33px] bg-[#0a1412] p-2 shadow-[0_30px_60px_rgba(0,0,0,0.25)] z-10">
+              <div className="relative w-full h-full rounded-[26px] overflow-hidden bg-white">
+                <div 
+                  className="absolute"
+                  style={{ top: '-4.74%', bottom: '-9.57%', left: '-15.41%', right: '-15.58%' }}
+                >
+                  <Image
+                    src="/images/hp-screen-1.png"
+                    alt="Sissi Kasir Mobile"
+                    fill
+                    className="object-fill"
+                    sizes="230px"
+                  />
+                </div>
               </div>
             </div>
 
-            {/* Phone 2: x: 960, y: 110 */}
+            {/* Phone 2: Laporan */}
             <div className="absolute left-[960px] top-[110px] w-[246px] h-[514px] rounded-[33px] bg-[#0a1412] p-2 shadow-[0_30px_60px_rgba(0,0,0,0.25)] z-0">
-              <div className="relative w-[230px] h-[498px] rounded-[26px] overflow-hidden bg-black">
-                <Image
-                  src="/images/hp-screen-2.png"
-                  alt="Sissi Laporan Mobile"
-                  fill
-                  className="object-cover"
-                  sizes="230px"
-                />
+              <div className="relative w-full h-full rounded-[26px] overflow-hidden bg-white">
+                <div 
+                  className="absolute"
+                  style={{ top: '-4.74%', bottom: '-9.57%', left: '-15.41%', right: '-15.58%' }}
+                >
+                  <Image
+                    src="/images/hp-screen-2.png"
+                    alt="Sissi Laporan Mobile"
+                    fill
+                    className="object-fill"
+                    sizes="230px"
+                  />
+                </div>
               </div>
             </div>
           </div>
 
           {/* Mobile/Tablet Phone Mockups: Centered & clipped at card bottom */}
-          <div className="lg:hidden flex items-end justify-center gap-4 px-6 pt-4 -mb-20 overflow-hidden">
-            <div className="w-[170px] sm:w-[200px] h-[360px] rounded-[28px] bg-[#0a1412] p-2 shadow-2xl shrink-0">
-              <div className="relative w-full h-full rounded-[22px] overflow-hidden bg-black">
-                <Image
-                  src="/images/hp-screen-1.png"
-                  alt="Sissi Kasir Mobile"
-                  fill
-                  className="object-cover"
-                  sizes="200px"
-                />
+          <div className="lg:hidden flex items-end justify-center gap-2 sm:gap-4 px-2 pt-6 -mb-28 overflow-hidden relative z-0">
+            {/* Phone 1: Kasir */}
+            <div className="relative w-[180px] sm:w-[220px] aspect-[246/514] rounded-[26px] sm:rounded-[30px] bg-[#0a1412] p-[6px] sm:p-2 shadow-2xl shrink-0 z-10 -mr-6 sm:-mr-4 translate-y-4">
+              <div className="relative w-full h-full rounded-[20px] sm:rounded-[24px] overflow-hidden bg-white">
+                <div 
+                  className="absolute" 
+                  style={{ top: '-4.74%', bottom: '-9.57%', left: '-15.41%', right: '-15.58%' }}
+                >
+                  <Image src="/images/hp-screen-1.png" alt="Sissi Kasir Mobile" fill className="object-fill" sizes="220px" />
+                </div>
               </div>
             </div>
-            <div className="w-[170px] sm:w-[200px] h-[320px] rounded-[28px] bg-[#0a1412] p-2 shadow-2xl shrink-0">
-              <div className="relative w-full h-full rounded-[22px] overflow-hidden bg-black">
-                <Image
-                  src="/images/hp-screen-2.png"
-                  alt="Sissi Laporan Mobile"
-                  fill
-                  className="object-cover"
-                  sizes="200px"
-                />
+
+            {/* Phone 2: Laporan */}
+            <div className="relative w-[180px] sm:w-[220px] aspect-[246/514] rounded-[26px] sm:rounded-[30px] bg-[#0a1412] p-[6px] sm:p-2 shadow-2xl shrink-0 z-0 translate-y-12">
+              <div className="relative w-full h-full rounded-[20px] sm:rounded-[24px] overflow-hidden bg-white">
+                <div 
+                  className="absolute" 
+                  style={{ top: '-4.74%', bottom: '-9.57%', left: '-15.41%', right: '-15.58%' }}
+                >
+                  <Image src="/images/hp-screen-2.png" alt="Sissi Laporan Mobile" fill className="object-fill" sizes="220px" />
+                </div>
               </div>
             </div>
           </div>

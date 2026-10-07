@@ -56,14 +56,16 @@ export function FiturSection() {
         </div>
 
         {/* Right Side: Pratinjau (812px x 560px, rounded-20, bg #f3f6f5) */}
-        <div className="lg:col-span-8 w-full rounded-[20px] bg-[#f3f6f5] p-6 sm:p-10 flex items-center justify-center min-h-[420px] lg:min-h-[560px]">
-          <div className="relative aspect-[16/10] w-full max-w-[760px] rounded-[14px] overflow-hidden shadow-lg border border-[#e4e9e7] bg-white">
+        <div className="lg:col-span-8 w-full rounded-[20px] bg-[#f3f6f5] flex items-center justify-center min-h-[420px] lg:min-h-[560px] overflow-hidden">
+          <div className="relative w-full max-w-[840px] flex items-center justify-center">
             <Image
+              key={activeTab.id}
               src={activeTab.imageSrc}
               alt={activeTab.name}
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 812px"
+              width={2100}
+              height={1380}
+              className="w-full h-auto block drop-shadow-sm"
+              sizes="(max-width: 1024px) 100vw, 840px"
             />
           </div>
         </div>

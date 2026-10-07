@@ -63,45 +63,46 @@ export function HeroSection() {
           <div className="flex-1 bg-white" />
         </div>
 
-        {/* Centered Mockup Screen (width: 1040, height: 650) */}
+        {/* Centered Mockup Screen (width: 1040) */}
         <div className="relative max-w-[1040px] mx-auto px-4 sm:px-6 lg:px-0 z-10 pb-10 sm:pb-16">
-          <div className="relative w-full aspect-[16/10] max-h-[650px] rounded-[14px] sm:rounded-[18px] overflow-hidden shadow-[0_30px_70px_rgba(5,40,32,0.28)] bg-[#f3f6f5]">
+          <div className="relative w-full drop-shadow-[0_20px_50px_rgba(5,40,32,0.15)]">
             <Image
               src="/images/hero-screen.png"
-              alt="Aplikasi Kasir Sissi di Layar Tablet"
-              fill
+              alt="Aplikasi Kasir Sissi"
+              width={2100}
+              height={1380}
               priority
-              className="object-cover"
+              className="w-full h-auto block"
               sizes="(max-width: 1040px) 100vw, 1040px"
             />
 
-            {/* Figma Callout 1 (left: ~6%, top: ~7%) - 34x34 circle with 3px white border */}
+            {/* Figma Callout 1 (Menu per kategori) */}
             <div
-              className="absolute left-[5.8%] top-[6.6%] w-[28px] h-[28px] sm:w-[34px] sm:h-[34px] rounded-full bg-[#ff7a45] border-[3px] border-white text-white font-bold font-mono text-xs sm:text-[14px] flex items-center justify-center shadow-[0_4px_12px_rgba(0,0,0,0.25)] select-none cursor-pointer hover:scale-110 transition-transform"
+              className="absolute left-[9.2%] top-[10.2%] w-[28px] h-[28px] sm:w-[34px] sm:h-[34px] rounded-full bg-[#ff7a45] border-[3px] border-white text-white font-bold font-mono text-xs sm:text-[14px] flex items-center justify-center shadow-[0_4px_12px_rgba(0,0,0,0.25)] select-none cursor-pointer hover:scale-110 transition-transform"
               title="1. Menu per kategori"
             >
               1
             </div>
 
-            {/* Figma Callout 2 (left: ~24%, top: ~1.2%) - 34x34 circle with 3px white border */}
+            {/* Figma Callout 2 (Cari menu atau SKU) */}
             <div
-              className="absolute left-[24.4%] top-[1.2%] w-[28px] h-[28px] sm:w-[34px] sm:h-[34px] rounded-full bg-[#ff7a45] border-[3px] border-white text-white font-bold font-mono text-xs sm:text-[14px] flex items-center justify-center shadow-[0_4px_12px_rgba(0,0,0,0.25)] select-none cursor-pointer hover:scale-110 transition-transform"
+              className="absolute left-[26.4%] top-[5.4%] w-[28px] h-[28px] sm:w-[34px] sm:h-[34px] rounded-full bg-[#ff7a45] border-[3px] border-white text-white font-bold font-mono text-xs sm:text-[14px] flex items-center justify-center shadow-[0_4px_12px_rgba(0,0,0,0.25)] select-none cursor-pointer hover:scale-110 transition-transform"
               title="2. Cari menu atau SKU"
             >
               2
             </div>
 
-            {/* Figma Callout 3 (right: ~3%, top: ~14%) - 34x34 circle with 3px white border */}
+            {/* Figma Callout 3 (Pesanan per meja) */}
             <div
-              className="absolute right-[3%] top-[14.2%] w-[28px] h-[28px] sm:w-[34px] sm:h-[34px] rounded-full bg-[#ff7a45] border-[3px] border-white text-white font-bold font-mono text-xs sm:text-[14px] flex items-center justify-center shadow-[0_4px_12px_rgba(0,0,0,0.25)] select-none cursor-pointer hover:scale-110 transition-transform"
+              className="absolute right-[6.6%] top-[17%] w-[28px] h-[28px] sm:w-[34px] sm:h-[34px] rounded-full bg-[#ff7a45] border-[3px] border-white text-white font-bold font-mono text-xs sm:text-[14px] flex items-center justify-center shadow-[0_4px_12px_rgba(0,0,0,0.25)] select-none cursor-pointer hover:scale-110 transition-transform"
               title="3. Pesanan per meja"
             >
               3
             </div>
 
-            {/* Figma Callout 4 (right: ~8%, bottom: ~9.8%) - 34x34 circle with 3px white border */}
+            {/* Figma Callout 4 (Bayar di tempat) */}
             <div
-              className="absolute right-[8%] bottom-[9.8%] w-[28px] h-[28px] sm:w-[34px] sm:h-[34px] rounded-full bg-[#ff7a45] border-[3px] border-white text-white font-bold font-mono text-xs sm:text-[14px] flex items-center justify-center shadow-[0_4px_12px_rgba(0,0,0,0.25)] select-none cursor-pointer hover:scale-110 transition-transform"
+              className="absolute right-[11.2%] bottom-[14.8%] w-[28px] h-[28px] sm:w-[34px] sm:h-[34px] rounded-full bg-[#ff7a45] border-[3px] border-white text-white font-bold font-mono text-xs sm:text-[14px] flex items-center justify-center shadow-[0_4px_12px_rgba(0,0,0,0.25)] select-none cursor-pointer hover:scale-110 transition-transform"
               title="4. Bayar di tempat"
             >
               4
