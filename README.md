@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sissi Landing Page
 
-## Getting Started
+Website Landing Page untuk **Sissi · Kasir Pintar untuk Usaha yang Tumbuh**, dibangun berdasarkan desain Figma Desktop & Mobile v3 (`Sissi · Website Desktop · v3` dan `Sissi · Website Mobile · v3`).
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🛠️ Tech Stack
+- **Framework**: [Next.js](https://nextjs.org/) (App Router, Turbopack, TypeScript)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Font**: Geist & Geist Mono (`next/font/google`)
+- **Assets**: Asli diekspor langsung dari Figma dan logo SVG resmi
+
+---
+
+## 📁 Struktur Direktori & Arsitektur
+
+Kode dirancang sangat modular, rapi, dan mudah di-maintain:
+
+```text
+sissi-landing-page/
+├── public/
+│   ├── images/              # Screenshot UI tablet & HP diekspor langsung dari Figma
+│   │   ├── hero-screen.png
+│   │   ├── cara-kerja-dapur.png
+│   │   ├── cara-kerja-bayar.png
+│   │   ├── cara-kerja-laporan.png
+│   │   ├── fitur-preview-kasbon.png
+│   │   ├── hp-screen-1.png
+│   │   └── hp-screen-2.png
+│   └── logos/               # Logo dan icon SVG resmi Sissi
+├── src/
+│   ├── app/
+│   │   ├── globals.css      # Design token warna, tipografi & styling dasar
+│   │   ├── layout.tsx       # Root layout & SEO metadata
+│   │   └── page.tsx         # Halaman utama menyusun 11 section sesuai Figma
+│   ├── components/
+│   │   ├── shared/          # Shared Components untuk kemudahan pemeliharaan
+│   │   │   ├── Button.tsx         # Tombol (primary, secondary, white, outline, ghost)
+│   │   │   ├── Container.tsx      # Pembungkus lebar maksimal (responsive)
+│   │   │   ├── SectionWrapper.tsx # Pembungkus section dengan background token
+│   │   │   ├── SectionHeader.tsx  # Header section (Tag, Judul, Subjudul)
+│   │   │   ├── Card.tsx           # Kartu putih interaktif & elevasi
+│   │   │   └── Badge.tsx          # Pill badge (brand, neutral, accent)
+│   │   ├── layout/          # Layout Navigasi & Footer
+│   │   │   ├── Navbar.tsx         # Header responsif (Desktop & Drawer Mobile)
+│   │   │   └── Footer.tsx         # Footer dengan 4 kolom navigasi & hak cipta
+│   │   └── sections/        # Section modular mandiri
+│   │       ├── HeroSection.tsx
+│   │       ├── KeteranganSection.tsx
+│   │       ├── CaraKerjaSection.tsx
+│   │       ├── FiturSection.tsx
+│   │       ├── SebelumSesudahSection.tsx
+│   │       ├── PerangkatSection.tsx
+│   │       ├── UntukUsahaSection.tsx
+│   │       ├── HargaSection.tsx
+│   │       ├── FaqSection.tsx
+│   │       └── AjakanSection.tsx
+│   └── constants/           # Data & Konten terpusat (Mudah di-update tanpa ubah UI)
+│       ├── navigation.ts    # Link menu & footer
+│       ├── features.ts      # Tab fitur & deskripsi
+│       ├── comparison.ts    # Tabel perbandingan Sebelum vs Sesudah Sissi
+│       ├── pricing.ts       # Paket harga (Bulanan/Tahunan) & matriks fitur
+│       ├── faq.ts           # Daftar pertanyaan & jawaban
+│       └── businessTypes.ts # 4 kategori bisnis (Kuliner, Ritel, Jasa, Sewa)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Menjalankan Project
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Mode Development
+```bash
+npm run dev
+```
+Buka browser di `http://localhost:3000`.
 
-## Learn More
+### Build untuk Produksi
+```bash
+npm run build
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Linter
+```bash
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 💡 Keunggulan Maintenance
+1. **Centralized Data (`src/constants/`)**: Ingin mengubah harga, pertanyaan FAQ, atau teks navigasi? Cukup edit file di folder `src/constants/` tanpa perlu membongkar struktur komponen UI.
+2. **Design Tokens (`globals.css`)**: Palet warna brand (`#f1702c`, `#f3f6f5`, `#292e31`, dll.) didefinisikan secara semantik di `@theme`.
+3. **Shared Components (`src/components/shared/`)**: Standar tombol, header, kartu, dan pembungkus section seragam di seluruh halaman.
