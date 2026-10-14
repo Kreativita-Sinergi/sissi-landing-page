@@ -3,7 +3,7 @@
 > **Dokumen hidup.** Agent/kontributor WAJIB membacanya di awal sesi dan memperbaruinya di akhir sesi.
 > Hanya lokal di repo ini.
 
-Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (panel hero miring + gradasi)
+Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (panel hero gradasi oranye)
 
 ## Menunggu reviu sebelum merge
 
@@ -50,6 +50,10 @@ _(kosong)_
 
 ## Selesai (terbaru di atas)
 
+- **2026-10-14 · Panel hero oranye + posisi kartu (XS; Claude Opus 5.5; masukan pemilik)** — gradasi panel jadi oranye
+  (`#e8611f` → `#f6a46f` → `#fde3cf`) + kilau putih; grafik turun setinggi bahu (`top-[40%]`), kartu menu turun
+  (`-bottom-[5%]`). Pelajaran: perubahan token di `@theme static` tidak terdeteksi cache Turbopack — hapus
+  `.next/cache .next/static .next/server` lalu build ulang (server `next dev` perlu dijalankan ulang).
 - **2026-10-14 · Panel hero miring + gradasi (S; Claude Opus 5.5; masukan pemilik)** — kotak abu datar diganti SVG
   `Backdrop` di `Hero.tsx`: sisi kiri miring, sudut membulat, gradasi abu hangat (`--color-panel-deep/-/-light`) +
   sinar oranye tipis. Pelajaran: Tailwind 4 hanya menulis variabel tema yang dipakai kelas → warna yang hanya dipakai

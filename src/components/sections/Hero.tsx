@@ -40,7 +40,7 @@ export function Hero({ t }: { t: Dictionary["hero"] }) {
           <Backdrop />
 
           {/* Di belakang orang */}
-          <UiCard img={t.ui.chart} className="top-[22%] -left-[3%] w-[52%]" />
+          <UiCard img={t.ui.chart} className="top-[40%] -left-[3%] w-[52%]" />
           <UiCard img={t.ui.order} className="top-[34%] -right-[3%] w-[34%]" />
 
           <Image
@@ -54,7 +54,7 @@ export function Hero({ t }: { t: Dictionary["hero"] }) {
           />
 
           {/* Di depan orang */}
-          <div className="absolute bottom-0 left-[1%] z-20 flex w-[50%] gap-[4%]">
+          <div className="absolute -bottom-[5%] left-[1%] z-20 flex w-[50%] gap-[4%]">
             {t.ui.menu.map((m) => (
               <UiCard key={m.src} img={m} className="relative w-1/3" sizes="90px" />
             ))}
@@ -127,7 +127,7 @@ function UiCard({ img, className, sizes = "260px" }: { img: UiImg; className: st
 }
 
 /**
- * Panel di belakang orang: sisi kiri miring + sudut membulat, gradasi abu hangat (gaya contoh pemilik).
+ * Panel di belakang orang: sisi kiri miring + sudut membulat, gradasi oranye (gaya contoh pemilik) + kilau putih tipis.
  * viewBox ≈ rasio kotak panel sehingga sudut tidak tertarik.
  */
 function Backdrop() {
@@ -145,8 +145,8 @@ function Backdrop() {
           <stop offset="1" style={{ stopColor: "var(--color-panel-light)" }} />
         </linearGradient>
         <radialGradient id="hero-glow" cx="0.62" cy="0.18" r="0.55">
-          <stop offset="0" style={{ stopColor: "var(--color-brand)", stopOpacity: 0.16 }} />
-          <stop offset="1" style={{ stopColor: "var(--color-brand)", stopOpacity: 0 }} />
+          <stop offset="0" style={{ stopColor: "#ffffff", stopOpacity: 0.28 }} />
+          <stop offset="1" style={{ stopColor: "#ffffff", stopOpacity: 0 }} />
         </radialGradient>
       </defs>
       <path

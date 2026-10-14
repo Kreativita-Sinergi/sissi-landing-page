@@ -34,9 +34,9 @@
 
 /* Gradasi panel hero (dipakai lewat var() di SVG, bukan kelas) → static agar selalu ditulis ke CSS. */
 @theme static {
-  --color-panel: #e4e0da;
-  --color-panel-deep: #c3bbb0;
-  --color-panel-light: #f1eee9;
+  --color-panel: #f6a46f;
+  --color-panel-deep: #e8611f;
+  --color-panel-light: #fde3cf;
 }
 
 @keyframes rise {
