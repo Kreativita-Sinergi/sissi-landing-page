@@ -3,7 +3,7 @@
 > **Dokumen hidup.** Agent/kontributor WAJIB membacanya di awal sesi dan memperbaruinya di akhir sesi.
 > Hanya lokal di repo ini.
 
-Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (hero kolase: foto pemilik + potongan UI)
+Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (kartu menu rapi, label Sissi, judul umum)
 
 ## Menunggu reviu sebelum merge
 
@@ -46,6 +46,10 @@ _(kosong)_
 
 ## Selesai (terbaru di atas)
 
+- **2026-10-14 · Rapikan hero (XS; Claude Opus 5.5; masukan pemilik)** — kartu menu dipotong tanpa tepi/sudut
+  bawaan aplikasi (sebelumnya garis dobel); file diganti nama `menu-*.webp` agar cache gambar tidak memakai versi
+  lama. Label "Sissi Kasir" → "Sissi · Software, aplikasi & IoT". Judul → "Kami membuat software untuk usahamu."
+  (tanpa "Indonesia", karena target pasar meluas).
 - **2026-10-14 · Hero kolase (M; Claude Opus 5.5; masukan pemilik)** — foto dari pemilik
   (`../assets/education-students-happy-asian-woman-…jpg`) dihapus latarnya tanpa halo: masker Vision
   (`scripts/hapus-latar-masker.swift`) + matting dua warna (`scripts/hapus-latar-matting.py`: alpha = proyeksi

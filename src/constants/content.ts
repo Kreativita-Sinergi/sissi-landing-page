@@ -38,7 +38,7 @@ export const nav = {
 
 export const hero = {
   eyebrow: `${site.company} · ${site.city}`,
-  title: "Kami membuat software untuk usaha Indonesia.",
+  title: "Kami membuat software untuk usahamu.",
   lead: "Produk kami dipakai usaha setiap hari, dan kami bisa membuatkan punyamu: website, aplikasi, sistem, sampai IoT.",
   primary: { label: "Konsultasi gratis", href: "#kontak" },
   secondary: { label: "Lihat layanan", href: "#layanan" },
@@ -55,12 +55,12 @@ export const hero = {
     chart: { src: "/hero/ui-grafik.webp", alt: "Grafik transaksi per jam di Sissi Kasir", width: 678, height: 268 },
     order: { src: "/hero/ui-pesanan.webp", alt: "Panel pesanan baru di Sissi Kasir", width: 378, height: 450 },
     menu: [
-      { src: "/hero/ui-menu-am.webp", alt: "Menu Americano", width: 179, height: 211 },
-      { src: "/hero/ui-menu-cl.webp", alt: "Menu Caffe Latte", width: 179, height: 211 },
-      { src: "/hero/ui-menu-ek.webp", alt: "Menu Es Kopi Susu Gula Aren", width: 179, height: 211 },
+      { src: "/hero/menu-am.webp", alt: "Menu Americano", width: 171, height: 175 },
+      { src: "/hero/menu-cl.webp", alt: "Menu Caffe Latte", width: 171, height: 175 },
+      { src: "/hero/menu-ek.webp", alt: "Menu Es Kopi Susu Gula Aren", width: 171, height: 175 },
     ],
   },
-  badge: { name: "Sissi Kasir", line: "Kasir offline untuk HP & tablet" },
+  badge: { name: "Sissi", line: "Software, aplikasi & IoT" },
   worksLabel: "Yang sudah kami buat",
   works: [
     {
