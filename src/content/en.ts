@@ -157,7 +157,7 @@ export const en: Dictionary = {
         cta: "Visit Sissi Accounting",
         visual: {
           ...id.products.items[2].visual,
-          alt: "Sissi Accounting home page: tidy books, a business with clearer direction",
+          alt: "Sissi Accounting owner dashboard: revenue, net profit, assets, and liabilities at a glance",
         },
       },
     ],
