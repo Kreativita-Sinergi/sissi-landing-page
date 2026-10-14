@@ -3,7 +3,7 @@
 > **Dokumen hidup.** Agent/kontributor WAJIB membacanya di awal sesi dan memperbaruinya di akhir sesi.
 > Hanya lokal di repo ini.
 
-Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (panel hero oranye pastel)
+Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (panel hero oranye pastel polos)
 
 ## Menunggu reviu sebelum merge
 
@@ -50,6 +50,8 @@ _(kosong)_
 
 ## Selesai (terbaru di atas)
 
+- **2026-10-14 · Panel hero polos (XS; Claude Opus 5.5; pilihan pemilik)** — gradasi dihapus; panel kini oranye
+  pastel polos `--color-panel: #fcd9bd` (kelas `fill-panel`, jadi `@theme static` tidak diperlukan lagi).
 - **2026-10-14 · Panel hero oranye pastel (XS; Claude Opus 5.5; pilihan pemilik)** — panel gelap tidak disukai pemilik.
   Kini gradasi pastel halus `#fff0e4` → `#fcd6b8` → `#f8bd93` + kilau putih lembut, tanpa butiran/garis tepi.
 - **2026-10-14 · Panel hero gelap + cahaya oranye (S; Claude Opus 5.5; disetujui pemilik)** — panel oranye kurang

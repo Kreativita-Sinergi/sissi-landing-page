@@ -127,32 +127,18 @@ function UiCard({ img, className, sizes = "260px" }: { img: UiImg; className: st
 }
 
 /**
- * Panel di belakang orang: sisi kiri miring + sudut membulat, gradasi oranye pastel yang halus (pilihan pemilik).
+ * Panel di belakang orang: sisi kiri miring + sudut membulat, oranye pastel polos (pilihan pemilik).
  * Pastel cukup terang sehingga sweater oranye pekat tetap menonjol.
  */
-const PANEL = "M152 0 H440 Q480 0 480 40 V300 Q480 340 440 340 H44 Q0 340 13 302 L103 38 Q116 0 152 0 Z";
-
 function Backdrop() {
   return (
     <svg
       aria-hidden
       viewBox="0 0 480 340"
       preserveAspectRatio="none"
-      className="absolute top-[28%] right-[1%] bottom-[2%] left-[-2%] h-[70%] w-[101%]"
+      className="absolute top-[28%] right-[1%] bottom-[2%] left-[-2%] h-[70%] w-[101%] fill-panel"
     >
-      <defs>
-        <linearGradient id="hero-panel" x1="0.15" y1="0" x2="0.85" y2="1">
-          <stop offset="0" style={{ stopColor: "var(--color-panel-light)" }} />
-          <stop offset="0.55" style={{ stopColor: "var(--color-panel)" }} />
-          <stop offset="1" style={{ stopColor: "var(--color-panel-deep)" }} />
-        </linearGradient>
-        <radialGradient id="hero-glow" cx="0.6" cy="0.1" r="0.6">
-          <stop offset="0" style={{ stopColor: "#ffffff", stopOpacity: 0.55 }} />
-          <stop offset="1" style={{ stopColor: "#ffffff", stopOpacity: 0 }} />
-        </radialGradient>
-      </defs>
-      <path d={PANEL} fill="url(#hero-panel)" />
-      <path d={PANEL} fill="url(#hero-glow)" />
+      <path d="M152 0 H440 Q480 0 480 40 V300 Q480 340 440 340 H44 Q0 340 13 302 L103 38 Q116 0 152 0 Z" />
     </svg>
   );
 }
