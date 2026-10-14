@@ -3,7 +3,7 @@
 > **Dokumen hidup.** Agent/kontributor WAJIB membacanya di awal sesi dan memperbaruinya di akhir sesi.
 > Hanya lokal di repo ini.
 
-Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (dua bahasa ID/EN + SEO per bahasa)
+Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (judul hero dua baris)
 
 ## Menunggu reviu sebelum merge
 
@@ -50,6 +50,9 @@ _(kosong)_
 
 ## Selesai (terbaru di atas)
 
+- **2026-10-14 · Judul hero dua baris (XS; Claude Opus 5.5; masukan pemilik)** — kolom teks hero dilebarkan
+  (`1.25fr_1fr`) dan ukuran judul disesuaikan (HP 1,8rem → desktop 3,1rem). Diukur dengan Playwright: 2 baris di
+  360–1440 px untuk ID dan EN (EN 1 baris di 768 px).
 - **2026-10-14 · Dua bahasa (ID/EN) + SEO per bahasa (L; Claude Opus 5.5; disetujui pemilik)** — keputusan pemilik:
   hanya Indonesia & Inggris; produk tidak dipaksa berbahasa Inggris (nama & tagline tetap Indonesia, ada catatan
   "products are currently available in Indonesian"); WA & email sama. `src/constants/content.ts` dipecah jadi kamus

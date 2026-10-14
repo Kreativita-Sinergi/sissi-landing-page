@@ -16,10 +16,10 @@ const tones: Record<WorkTone, string> = {
 export function Hero({ t }: { t: Dictionary["hero"] }) {
   return (
     <section className="overflow-hidden border-b border-line">
-      <Container className="grid items-center gap-14 pt-12 pb-16 sm:pt-16 lg:grid-cols-[1.1fr_1fr] lg:gap-12 lg:pt-16 lg:pb-20">
+      <Container className="grid items-center gap-14 pt-12 pb-16 sm:pt-16 lg:grid-cols-[1.25fr_1fr] lg:gap-10 lg:pt-16 lg:pb-20">
         <div className="animate-rise">
           <p className="text-sm font-semibold text-brand-deep">{t.eyebrow}</p>
-          <h1 className="mt-4 text-[2.25rem] leading-[1.08] font-extrabold tracking-[-0.035em] text-balance sm:text-5xl xl:text-[3.25rem]">
+          <h1 className="mt-4 text-[1.8rem] leading-[1.12] font-extrabold tracking-[-0.04em] text-balance sm:text-[2.6rem] lg:text-[2.75rem] xl:text-[3.1rem]">
             {t.title}
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-pretty text-muted">{t.lead}</p>
