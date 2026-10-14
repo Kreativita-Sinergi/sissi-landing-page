@@ -44,17 +44,23 @@ export const hero = {
   secondary: { label: "Lihat layanan", href: "#layanan" },
   note: "Konsultasi gratis · Harga sesuai kebutuhan",
   person: {
-    src: "/hero/potret.webp",
-    // Foto: Unsplash (lisensi Unsplash, bebas pakai komersial), latar dihapus. Ganti dengan foto tim asli bila ada.
-    alt: "Perempuan berkerudung merah muda tersenyum ke arah kamera",
-    width: 900,
-    height: 992,
+    src: "/hero/orang-buku.webp",
+    // Foto dari pemilik (assets/), latar dihapus dengan matting dua warna. Ganti dengan foto tim asli bila ada.
+    alt: "Perempuan bersweter oranye tersenyum sambil memegang buku catatan",
+    width: 1000,
+    height: 1339,
   },
-  floats: [
-    { src: "/products/laporan-tablet.webp", alt: "Laporan jam ramai di Sissi Kasir", width: 1280, height: 800 },
-    { src: "/products/kasir-hp.webp", alt: "Sissi Kasir di HP", width: 390, height: 844 },
-    { src: "/products/booth-hias.png", alt: "Layar hias foto Sissi Booth", width: 1440, height: 900 },
-  ],
+  // Potongan UI asli Sissi Kasir untuk komposisi hero.
+  ui: {
+    chart: { src: "/hero/ui-grafik.webp", alt: "Grafik transaksi per jam di Sissi Kasir", width: 678, height: 268 },
+    order: { src: "/hero/ui-pesanan.webp", alt: "Panel pesanan baru di Sissi Kasir", width: 378, height: 450 },
+    menu: [
+      { src: "/hero/ui-menu-am.webp", alt: "Menu Americano", width: 179, height: 211 },
+      { src: "/hero/ui-menu-cl.webp", alt: "Menu Caffe Latte", width: 179, height: 211 },
+      { src: "/hero/ui-menu-ek.webp", alt: "Menu Es Kopi Susu Gula Aren", width: 179, height: 211 },
+    ],
+  },
+  badge: { name: "Sissi Kasir", line: "Kasir offline untuk HP & tablet" },
   worksLabel: "Yang sudah kami buat",
   works: [
     {

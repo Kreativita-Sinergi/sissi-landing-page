@@ -3,7 +3,7 @@
 > **Dokumen hidup.** Agent/kontributor WAJIB membacanya di awal sesi dan memperbaruinya di akhir sesi.
 > Hanya lokal di repo ini.
 
-Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (hero: potret baru, potongan latar lebih rapi)
+Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (hero kolase: foto pemilik + potongan UI)
 
 ## Menunggu reviu sebelum merge
 
@@ -25,8 +25,10 @@ _(kosong)_
 
 ## Backlog (belum dikerjakan)
 
-- [ ] **P2 · Foto hero asli** — `public/hero/potret.webp` = foto stok Unsplash berlatar dihapus
-  (https://unsplash.com/photos/a-woman-in-a-hijab-using-a-tablet-CotAYYsdEDU, lisensi Unsplash).
+- [ ] **P1 · Lisensi foto hero** — `public/hero/orang-buku.webp` dari file yang diberikan pemilik; nama filenya mirip
+  foto stok Freepik. Pastikan lisensinya (Freepik gratis mewajibkan atribusi; premium tidak). Bila perlu atribusi,
+  tambahkan di footer.
+- [ ] **P3 · Foto hero asli** — idealnya foto anggota tim sungguhan.
   Ganti dengan foto anggota tim asli bila ada: latar polos, setengah badan; potong dengan Vision macOS seperti catatan
   2026-10-14, simpan WebP transparan ±800 px lebar.
 - [ ] **P2 · Tangkapan layar aplikasi Loka Accounting** — produk Loka kini memakai panel tipografi (belum ada
@@ -44,6 +46,13 @@ _(kosong)_
 
 ## Selesai (terbaru di atas)
 
+- **2026-10-14 · Hero kolase (M; Claude Opus 5.5; masukan pemilik)** — foto dari pemilik
+  (`../assets/education-students-happy-asian-woman-…jpg`) dihapus latarnya tanpa halo: masker Vision
+  (`scripts/hapus-latar-masker.swift`) + matting dua warna (`scripts/hapus-latar-matting.py`: alpha = proyeksi
+  (C−B) ke (H−B), warna tepi = warna subjek terdekat). Diperiksa di latar gelap/putih/oranye. Komposisi meniru contoh
+  pemilik: panel abu (sweter oranye bentrok dengan panel oranye), potongan UI asli Kasir — grafik & panel pesanan di
+  belakang orang, 3 kartu menu di depan — dan label "Sissi Kasir". Pelajaran: server `next dev` lama sempat tertinggal
+  di port 3100 dan menyajikan CSS lama; selalu hentikan server dev setelah dipakai (`lsof -iTCP:3100`).
 - **2026-10-14 · Potret hero baru, potongan lebih rapi (S; Claude Opus 5.5; masukan pemilik)** — foto yang diminta
   pemilik (0buCbtPbP14) ternyata Unsplash+ berbayar → dipakai foto gratis yang mirip (perempuan berkerudung, latar
   polos). Potongan sebelumnya tidak rapi (tepi dikikis → lingkaran gelap, sisa warna latar). Cara baru

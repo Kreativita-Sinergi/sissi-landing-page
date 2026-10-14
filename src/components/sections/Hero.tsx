@@ -34,22 +34,38 @@ export function Hero() {
           <p className="mt-3 text-sm text-faint">{hero.note}</p>
         </div>
 
-        {/* Orang (latar dihapus) di depan panel oranye + tangkapan layar asli produk yang melayang. */}
-        <div className="relative mx-auto aspect-[1/1.02] w-full max-w-[360px] animate-rise [animation-delay:150ms] sm:max-w-[480px] lg:mr-0">
-          <div aria-hidden className="absolute inset-x-[6%] top-[40%] bottom-0 rounded-[36px] bg-brand" />
+        {/* Gaya kolase: orang tanpa latar, potongan UI asli di belakang & di depan, label produk. */}
+        <div className="relative mx-auto aspect-[1/1.05] w-full max-w-[380px] animate-rise [animation-delay:150ms] sm:max-w-[520px] lg:mr-0">
+          <div aria-hidden className="absolute inset-x-[2%] top-[30%] bottom-[2%] rounded-[40px] bg-panel" />
+
+          {/* Di belakang orang */}
+          <UiCard img={hero.ui.chart} className="top-[22%] -left-[3%] w-[52%]" />
+          <UiCard img={hero.ui.order} className="top-[34%] -right-[3%] w-[34%]" />
+
           <Image
             src={hero.person.src}
             alt={hero.person.alt}
             width={hero.person.width}
             height={hero.person.height}
             priority
-            sizes="(min-width: 1024px) 420px, 80vw"
-            className="absolute bottom-0 left-1/2 w-[62%] -translate-x-[50%]"
+            sizes="(min-width: 1024px) 380px, 70vw"
+            className="absolute bottom-[2%] left-1/2 z-10 w-[64%] -translate-x-[46%]"
           />
 
-          <Float className="top-[20%] -left-[4%] w-[42%] sm:-left-[8%]" img={hero.floats[0]} />
-          <Float className="top-[50%] -right-[2%] w-[22%] sm:-right-[4%]" img={hero.floats[1]} rounded="rounded-[14px]" />
-          <Float className="bottom-[7%] -left-[2%] w-[40%] sm:-left-[8%]" img={hero.floats[2]} />
+          {/* Di depan orang */}
+          <div className="absolute bottom-0 left-[1%] z-20 flex w-[50%] gap-[4%]">
+            {hero.ui.menu.map((m) => (
+              <UiCard key={m.src} img={m} className="relative w-1/3" sizes="90px" />
+            ))}
+          </div>
+
+          <div className="absolute top-[6%] right-0 z-20 flex items-center gap-2.5 rounded-2xl bg-surface py-2.5 pr-4 pl-2.5 shadow-[0_14px_30px_-16px_rgba(31,35,38,0.45)]">
+            <Image src="/brand/sissi-mark.svg" alt="" width={32} height={32} className="size-8" />
+            <span>
+              <span className="block text-sm leading-tight font-bold">{hero.badge.name}</span>
+              <span className="block text-[11px] leading-tight text-muted">{hero.badge.line}</span>
+            </span>
+          </div>
         </div>
       </Container>
 
@@ -93,19 +109,18 @@ export function Hero() {
   );
 }
 
-type FloatImg = { src: string; alt: string; width: number; height: number };
+type UiImg = { src: string; alt: string; width: number; height: number };
 
-/** Kartu tangkapan layar yang melayang di hero. */
-function Float({ img, className, rounded = "rounded-xl" }: { img: FloatImg; className: string; rounded?: string }) {
+/** Potongan UI asli dalam kartu putih bertepi tipis. */
+function UiCard({ img, className, sizes = "260px" }: { img: UiImg; className: string; sizes?: string }) {
   return (
     <div
       className={cn(
-        "absolute overflow-hidden border-4 border-surface bg-surface shadow-[0_24px_50px_-18px_rgba(31,35,38,0.45)]",
-        rounded,
+        "absolute overflow-hidden rounded-xl border border-line bg-surface shadow-[0_20px_40px_-20px_rgba(31,35,38,0.35)]",
         className,
       )}
     >
-      <Image src={img.src} alt={img.alt} width={img.width} height={img.height} sizes="220px" className="block h-auto w-full" />
+      <Image src={img.src} alt={img.alt} width={img.width} height={img.height} sizes={sizes} className="block h-auto w-full" />
     </div>
   );
 }
