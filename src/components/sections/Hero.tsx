@@ -9,7 +9,6 @@ import { cn } from "@/components/shared/cn";
 const tones: Record<WorkTone, string> = {
   sand: "bg-sand",
   yellow: "bg-booth-yellow",
-  loka: "bg-loka-bg",
   dark: "bg-ink",
 };
 

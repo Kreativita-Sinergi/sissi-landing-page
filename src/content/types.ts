@@ -12,12 +12,10 @@ export type Product = {
   audience: string;
   badge: string;
   cta: string;
-  visual:
-    | { kind: "screen"; src: string; alt: string; width: number; height: number; tone: "light" | "yellow" }
-    | { kind: "panel"; title: string; modules: string[] };
+  visual: { kind: "screen"; src: string; alt: string; width: number; height: number; tone: "light" | "yellow" };
 };
 
-export type WorkTone = "sand" | "yellow" | "loka" | "dark";
+export type WorkTone = "sand" | "yellow" | "dark";
 
 /** Bentuk kamus mengikuti bahasa bawaan (id); bahasa lain wajib berbentuk sama. */
 export type Dictionary = typeof id;

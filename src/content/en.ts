@@ -8,7 +8,7 @@ export const en: Dictionary = {
   meta: {
     title: "Sissi — Software, apps & IoT for businesses | PT. Sissi Kreatif Teknologi",
     description:
-      "PT. Sissi Kreatif Teknologi builds Sissi Kasir, Sissi Booth, and Loka Accounting, and takes on custom websites, apps, business systems, and IoT projects. Free consultation.",
+      "PT. Sissi Kreatif Teknologi builds Sissi Kasir, Sissi Booth, and Sissi Accounting, and takes on custom websites, apps, business systems, and IoT projects. Free consultation.",
     keywords: [
       "software development company Indonesia",
       "web development",
@@ -17,7 +17,7 @@ export const en: Dictionary = {
       "point of sale app",
       "Sissi Kasir",
       "Sissi Booth",
-      "Loka Accounting",
+      "Sissi Accounting",
     ],
     ogAlt: "PT. Sissi Kreatif Teknologi: software, apps, and IoT for businesses",
   },
@@ -63,7 +63,7 @@ export const en: Dictionary = {
   services: {
     eyebrow: "Services",
     title: "Tell us the problem. We will design the system.",
-    body: "The team behind Sissi Kasir, Sissi Booth, and Loka Accounting also builds for clients. You talk directly to the people who write the code.",
+    body: "The team behind Sissi Kasir, Sissi Booth, and Sissi Accounting also builds for clients. You talk directly to the people who write the code.",
     problemLabel: "The problem",
     solutionLabel: "What we build",
     exampleLabel: "Example",
@@ -106,7 +106,7 @@ export const en: Dictionary = {
       },
     ],
     bundle: {
-      text: "A small business that wants something ready to use? Combine Sissi Kasir, Sissi Booth, or Loka Accounting with a website for your business.",
+      text: "A small business that wants something ready to use? Combine Sissi Kasir, Sissi Booth, or Sissi Accounting with a website for your business.",
       cta: "Ask about the small business package",
     },
   },
@@ -145,15 +145,19 @@ export const en: Dictionary = {
       },
       {
         ...id.products.items[2],
-        body: "Online accounting software for businesses. Transactions, cash, stock, and reports connected in one financial workspace.",
-        points: ["Sales and purchases", "Cash and bank", "Inventory and fixed assets", "Ready-to-read financial reports"],
-        audience: "Small businesses · Growing companies",
+        body: "Online accounting software for Indonesian businesses. From the first transaction to closing the books: cash, stock, and financial reports in one clear flow.",
+        points: [
+          "Connected sales and purchases",
+          "Cash & bank with reconciliation",
+          "Multi-warehouse inventory and fixed assets",
+          "Profit & loss, balance sheet, and cash flow",
+        ],
+        audience: "Indonesian businesses · Finance teams · Connects with Sissi Kasir",
         badge: "30-day free trial",
-        cta: "Visit Loka Accounting",
+        cta: "Visit Sissi Accounting",
         visual: {
-          kind: "panel",
-          title: "One workspace for operations and finance",
-          modules: ["Sales", "Purchases", "Cash & Bank", "Inventory", "Fixed Assets", "Reports"],
+          ...id.products.items[2].visual,
+          alt: "Sissi Accounting home page: tidy books, a business with clearer direction",
         },
       },
     ],
@@ -212,7 +216,7 @@ export const en: Dictionary = {
     ],
     facts: [
       { label: "Location", value: `${site.city}, ${site.region}, Indonesia` },
-      { label: "Live products", value: "Sissi Kasir, Sissi Booth, Loka Accounting" },
+      { label: "Live products", value: "Sissi Kasir, Sissi Booth, Sissi Accounting" },
       { label: "Consultation", value: "In person or online" },
     ],
   },

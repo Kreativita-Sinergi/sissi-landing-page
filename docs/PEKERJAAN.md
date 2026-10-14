@@ -3,7 +3,7 @@
 > **Dokumen hidup.** Agent/kontributor WAJIB membacanya di awal sesi dan memperbaruinya di akhir sesi.
 > Hanya lokal di repo ini.
 
-Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (panel hero oranye pastel polos)
+Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (Loka Accounting → Sissi Accounting)
 
 ## Menunggu reviu sebelum merge
 
@@ -35,9 +35,6 @@ _(kosong)_
 - [ ] **P3 · Foto hero asli** — idealnya foto anggota tim sungguhan.
   Ganti dengan foto anggota tim asli bila ada: latar polos, setengah badan; potong dengan Vision macOS seperti catatan
   2026-10-14, simpan WebP transparan ±800 px lebar.
-- [ ] **P2 · Tangkapan layar aplikasi Loka Accounting** — produk Loka kini memakai panel tipografi (belum ada
-  tangkapan layar aplikasi di Dev/Sissi). Ganti dengan layar asli bila tersedia (`src/content/id.ts` & `en.ts` →
-  `products.items[loka].visual`).
 - [ ] **P3 · Tangkapan layar portofolio diperbarui** — `public/products/site-*.jpg` diambil 2026-10-14 dari situs
   langsung (Chrome headless 1440×900). Ambil ulang bila situsnya berubah besar.
 - [ ] **P3 · Nama PT** — situs memakai "PT. Sissi Kreatif Teknologi" atas permintaan pemilik walau akta belum
@@ -50,6 +47,13 @@ _(kosong)_
 
 ## Selesai (terbaru di atas)
 
+- **2026-10-14 · Loka Accounting → Sissi Accounting (S; Claude Opus 5.5; permintaan pemilik)** — produk kini
+  "Sissi Accounting" di https://accounting.sissi.id/ (ID & EN, footer, deret karya, meta). Isi dari situs produk:
+  tagline "Pembukuan rapi. Usaha lebih terarah.", fitur (penjualan/pembelian, kas & bank + rekonsiliasi,
+  multi-gudang & aset tetap, laba rugi/neraca/arus kas), integrasi opsional dengan Sissi Kasir, trial 30 hari.
+  Panel tipografi diganti tangkapan layar asli `public/products/site-accounting.jpg` (Chrome headless 1440×900);
+  `site-lokatech.jpg`, varian visual `panel`, nada `loka`, dan token `--color-loka-*` dihapus. Id produk/anchor
+  jadi `accounting` (`#produk-accounting`).
 - **2026-10-14 · Panel hero polos (XS; Claude Opus 5.5; pilihan pemilik)** — gradasi dihapus; panel kini oranye
   pastel polos `--color-panel: #fcd9bd` (kelas `fill-panel`, jadi `@theme static` tidak diperlukan lagi).
 - **2026-10-14 · Panel hero oranye pastel (XS; Claude Opus 5.5; pilihan pemilik)** — panel gelap tidak disukai pemilik.

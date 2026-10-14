@@ -5,32 +5,16 @@ import { ScreenFrame } from "@/components/shared/ScreenFrame";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { cn } from "@/components/shared/cn";
 
-function Visual({ visual, name }: { visual: Product["visual"]; name: string }) {
-  if (visual.kind === "screen") {
-    return (
-      <div className={cn("rounded-2xl p-5 sm:p-8", visual.tone === "yellow" ? "bg-booth-yellow" : "bg-sand")}>
-        <ScreenFrame
-          src={visual.src}
-          alt={visual.alt}
-          width={visual.width}
-          height={visual.height}
-          sizes="(min-width: 1024px) 560px, 92vw"
-        />
-      </div>
-    );
-  }
-  // Loka belum punya tangkapan layar aplikasi di repo ini → panel tipografi, bukan UI karangan.
+function Visual({ visual }: { visual: Product["visual"] }) {
   return (
-    <div className="flex aspect-[16/11] flex-col justify-between rounded-2xl bg-loka-bg p-7 text-loka-fg sm:p-10">
-      <p className="font-mono text-[11px] tracking-[0.16em] text-loka-accent uppercase">{name}</p>
-      <p className="max-w-sm text-2xl leading-snug font-semibold tracking-[-0.02em] sm:text-3xl">{visual.title}</p>
-      <ul className="flex flex-wrap gap-2">
-        {visual.modules.map((m) => (
-          <li key={m} className="rounded-full border border-loka-accent/30 px-3 py-1 text-xs text-loka-soft">
-            {m}
-          </li>
-        ))}
-      </ul>
+    <div className={cn("rounded-2xl p-5 sm:p-8", visual.tone === "yellow" ? "bg-booth-yellow" : "bg-sand")}>
+      <ScreenFrame
+        src={visual.src}
+        alt={visual.alt}
+        width={visual.width}
+        height={visual.height}
+        sizes="(min-width: 1024px) 560px, 92vw"
+      />
     </div>
   );
 }
@@ -46,7 +30,7 @@ export function Products({ t }: { t: Dictionary["products"] }) {
           {t.items.map((p, i) => (
             <article key={p.id} id={`produk-${p.id}`} className="scroll-mt-24 grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
               <div className={cn(i % 2 === 1 && "lg:order-2")}>
-                <Visual visual={p.visual} name={p.name} />
+                <Visual visual={p.visual} />
               </div>
               <div>
                 <div className="flex flex-wrap items-center gap-3">

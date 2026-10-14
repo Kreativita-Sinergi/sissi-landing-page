@@ -22,10 +22,6 @@
 
   /* Warna merek produk lain, hanya untuk panel visualnya. */
   --color-booth-yellow: #ffe24a;
-  --color-loka-bg: #0b1016;
-  --color-loka-fg: #e6f6f7;
-  --color-loka-accent: #6fe0e4;
-  --color-loka-soft: #b8e9eb;
 
   --font-sans: var(--font-jakarta), system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;

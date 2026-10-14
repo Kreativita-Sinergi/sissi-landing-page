@@ -3,7 +3,7 @@
 > **Baca seluruh berkas ini SEBELUM mengubah kode.** Aturan kerja umum (git, estimasi, catatan, sumber daya)
 > sama dengan semua proyek pemilik: `../pos/sissi-pos-app/docs/aturan-lengkap.md`. Jangan mengubah `../pos/`.
 
-Situs perusahaan **PT. Sissi Kreatif Teknologi** (sissi.id): profil, produk (Sissi Kasir, Sissi Booth, Loka
+Situs perusahaan **PT. Sissi Kreatif Teknologi** (sissi.id): profil, produk (Sissi Kasir, Sissi Booth, Sissi
 Accounting), layanan (website, aplikasi, sistem custom, IoT, UI/UX, perawatan), cara kerja, portofolio, tentang,
 FAQ, dan formulir permintaan proyek. Bahasa kerja & teks: **Bahasa Indonesia**.
 
@@ -21,7 +21,7 @@ FAQ, dan formulir permintaan proyek. Bahasa kerja & teks: **Bahasa Indonesia**.
    `src/content/site.ts`. Komponen tidak berisi copy dan menerima teks lewat prop `t`. Nama produk & tagline
    produk tetap bahasa Indonesia di semua bahasa (keputusan pemilik). **Jangan menulis harga jasa**:
    keputusan pemilik "gratis konsultasi, harga sesuai kebutuhan". Fakta produk harus sesuai situs produknya
-   (kasir.sissi.id, booth.sissi.id, lokatech.id) — jangan mengarang angka, klien, atau testimoni.
+   (kasir.sissi.id, booth.sissi.id, accounting.sissi.id) — jangan mengarang angka, klien, atau testimoni.
 6. **Token desain di `src/app/globals.css` (`@theme`)** — jangan hex mentah di komponen. Warna di `src/lib/og.ts`
    harus sama dengan `@theme`.
 7. **Anti "AI slop":** tanpa gradien ungu, ikon dalam lingkaran berderet, kartu kaca, statistik karangan, atau
