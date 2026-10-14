@@ -16,7 +16,7 @@ const tones: Record<WorkTone, string> = {
 export function Hero({ t }: { t: Dictionary["hero"] }) {
   return (
     <section className="overflow-hidden border-b border-line">
-      <Container className="grid items-center gap-14 pt-12 pb-16 sm:pt-16 lg:grid-cols-[1.25fr_1fr] lg:gap-10 lg:pt-16 lg:pb-20">
+      <Container className="grid items-center gap-14 pt-12 pb-16 sm:pt-16 lg:grid-cols-[1.45fr_1fr] lg:gap-16 xl:gap-20 lg:pt-16 lg:pb-20">
         <div className="animate-rise">
           <p className="text-sm font-semibold text-brand-deep">{t.eyebrow}</p>
           <h1 className="mt-4 text-[1.8rem] leading-[1.12] font-extrabold tracking-[-0.04em] text-balance sm:text-[2.6rem] lg:text-[2.75rem] xl:text-[3.1rem]">
@@ -36,7 +36,7 @@ export function Hero({ t }: { t: Dictionary["hero"] }) {
         </div>
 
         {/* Gaya kolase: orang tanpa latar, potongan UI asli di belakang & di depan, label produk. */}
-        <div className="relative mx-auto aspect-[1/1.05] w-full max-w-[380px] animate-rise [animation-delay:150ms] sm:max-w-[520px] lg:mr-0">
+        <div className="relative mx-auto aspect-[1/1.05] w-full max-w-[380px] animate-rise [animation-delay:150ms] sm:max-w-[480px] lg:mr-0">
           <div aria-hidden className="absolute inset-x-[2%] top-[30%] bottom-[2%] rounded-[40px] bg-panel" />
 
           {/* Di belakang orang */}
