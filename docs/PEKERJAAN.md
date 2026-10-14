@@ -51,8 +51,8 @@ _(kosong)_
   "Sissi Accounting" di https://accounting.sissi.id/ (ID & EN, footer, deret karya, meta). Isi dari situs produk:
   tagline "Pembukuan rapi. Usaha lebih terarah.", fitur (penjualan/pembelian, kas & bank + rekonsiliasi,
   multi-gudang & aset tetap, laba rugi/neraca/arus kas), integrasi opsional dengan Sissi Kasir, trial 30 hari.
-  Panel tipografi diganti tangkapan layar dashboard aplikasi dari pemilik `public/products/accounting-dashboard.jpg`
-  (1600×755, dipakai di bagian Produk & deret karya);
+  Panel tipografi diganti tangkapan layar dashboard aplikasi dari pemilik `public/products/accounting-ringkasan.jpg`
+  (1586×1058, dipakai di bagian Produk & deret karya);
   `site-lokatech.jpg`, varian visual `panel`, nada `loka`, dan token `--color-loka-*` dihapus. Id produk/anchor
   jadi `accounting` (`#produk-accounting`).
 - **2026-10-14 · Panel hero polos (XS; Claude Opus 5.5; pilihan pemilik)** — gradasi dihapus; panel kini oranye
