@@ -127,8 +127,8 @@ function UiCard({ img, className, sizes = "260px" }: { img: UiImg; className: st
 }
 
 /**
- * Panel di belakang orang: sisi kiri miring + sudut membulat. Arang gelap (warna logo) agar sweater oranye menonjol,
- * cahaya oranye di belakang kepala agar siluet rambut tetap terbaca, butiran halus + garis tepi tipis untuk kedalaman.
+ * Panel di belakang orang: sisi kiri miring + sudut membulat, gradasi oranye pastel yang halus (pilihan pemilik).
+ * Pastel cukup terang sehingga sweater oranye pekat tetap menonjol.
  */
 const PANEL = "M152 0 H440 Q480 0 480 40 V300 Q480 340 440 340 H44 Q0 340 13 302 L103 38 Q116 0 152 0 Z";
 
@@ -141,31 +141,18 @@ function Backdrop() {
       className="absolute top-[28%] right-[1%] bottom-[2%] left-[-2%] h-[70%] w-[101%]"
     >
       <defs>
-        <linearGradient id="hero-panel" x1="0.1" y1="0" x2="0.9" y2="1">
+        <linearGradient id="hero-panel" x1="0.15" y1="0" x2="0.85" y2="1">
           <stop offset="0" style={{ stopColor: "var(--color-panel-light)" }} />
-          <stop offset="0.6" style={{ stopColor: "var(--color-panel)" }} />
+          <stop offset="0.55" style={{ stopColor: "var(--color-panel)" }} />
           <stop offset="1" style={{ stopColor: "var(--color-panel-deep)" }} />
         </linearGradient>
-        <radialGradient id="hero-glow" cx="0.6" cy="0.08" r="0.62">
-          <stop offset="0" style={{ stopColor: "var(--color-brand)", stopOpacity: 0.75 }} />
-          <stop offset="0.45" style={{ stopColor: "var(--color-brand)", stopOpacity: 0.22 }} />
-          <stop offset="1" style={{ stopColor: "var(--color-brand)", stopOpacity: 0 }} />
+        <radialGradient id="hero-glow" cx="0.6" cy="0.1" r="0.6">
+          <stop offset="0" style={{ stopColor: "#ffffff", stopOpacity: 0.55 }} />
+          <stop offset="1" style={{ stopColor: "#ffffff", stopOpacity: 0 }} />
         </radialGradient>
-        <radialGradient id="hero-glow-2" cx="0.08" cy="0.95" r="0.45">
-          <stop offset="0" style={{ stopColor: "var(--color-brand)", stopOpacity: 0.18 }} />
-          <stop offset="1" style={{ stopColor: "var(--color-brand)", stopOpacity: 0 }} />
-        </radialGradient>
-        <filter id="hero-grain" x="0" y="0" width="100%" height="100%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" />
-          <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.07 0" />
-          <feComposite in2="SourceGraphic" operator="in" />
-        </filter>
       </defs>
       <path d={PANEL} fill="url(#hero-panel)" />
       <path d={PANEL} fill="url(#hero-glow)" />
-      <path d={PANEL} fill="url(#hero-glow-2)" />
-      <path d={PANEL} fill="#000" filter="url(#hero-grain)" />
-      <path d={PANEL} fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
     </svg>
   );
 }

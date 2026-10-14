@@ -3,7 +3,7 @@
 > **Dokumen hidup.** Agent/kontributor WAJIB membacanya di awal sesi dan memperbaruinya di akhir sesi.
 > Hanya lokal di repo ini.
 
-Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (panel hero gelap + cahaya oranye)
+Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (panel hero oranye pastel)
 
 ## Menunggu reviu sebelum merge
 
@@ -50,6 +50,8 @@ _(kosong)_
 
 ## Selesai (terbaru di atas)
 
+- **2026-10-14 · Panel hero oranye pastel (XS; Claude Opus 5.5; pilihan pemilik)** — panel gelap tidak disukai pemilik.
+  Kini gradasi pastel halus `#fff0e4` → `#fcd6b8` → `#f8bd93` + kilau putih lembut, tanpa butiran/garis tepi.
 - **2026-10-14 · Panel hero gelap + cahaya oranye (S; Claude Opus 5.5; disetujui pemilik)** — panel oranye kurang
   kontras dengan sweater oranye. Kini gradasi arang (`#3a3f43` → `#24282b` → `#16191b`), cahaya oranye di belakang
   kepala (siluet rambut tetap terbaca) + cahaya tipis kiri bawah, butiran halus (feTurbulence 7%), garis tepi putih 8%.
