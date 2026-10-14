@@ -2,21 +2,21 @@
 
 import { useId, useState } from "react";
 import { Plus } from "lucide-react";
-import { faq } from "@/constants/content";
+import type { Dictionary } from "@/content";
 import { Container } from "@/components/shared/Container";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { cn } from "@/components/shared/cn";
 
-export function Faq() {
+export function Faq({ t }: { t: Dictionary["faq"] }) {
   const [open, setOpen] = useState<number | null>(0);
   const base = useId();
 
   return (
     <section id="faq" className="py-20 sm:py-28">
       <Container className="grid gap-12 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
-        <SectionHeader eyebrow={faq.eyebrow} title={faq.title} className="lg:sticky lg:top-28 lg:self-start" />
+        <SectionHeader eyebrow={t.eyebrow} title={t.title} className="lg:sticky lg:top-28 lg:self-start" />
         <ul className="border-t border-line">
-          {faq.items.map((item, i) => {
+          {t.items.map((item, i) => {
             const isOpen = open === i;
             const panelId = `${base}-p${i}`;
             return (

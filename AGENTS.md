@@ -16,7 +16,10 @@ FAQ, dan formulir permintaan proyek. Bahasa kerja & teks: **Bahasa Indonesia**.
 3. **Estimasi sebelum kerja:** ukuran XS–XL; **M ke atas → minta persetujuan pemilik**.
 4. **Perintah berat lewat `scripts/exclusive.sh`** (build, lint penuh). Server dev di **port 3100** (8080 milik
    sissi-pos-service); hentikan setelah dipakai.
-5. **Semua teks di `src/constants/content.ts`** — komponen tidak berisi copy. **Jangan menulis harga jasa**:
+5. **Dua bahasa: Indonesia (`/`, bawaan) & Inggris (`/en`).** Semua teks di kamus `src/content/id.ts` dan
+   `src/content/en.ts` (bentuk wajib sama — TypeScript menolak bila beda); data bersama (kontak, nama PT) di
+   `src/content/site.ts`. Komponen tidak berisi copy dan menerima teks lewat prop `t`. Nama produk & tagline
+   produk tetap bahasa Indonesia di semua bahasa (keputusan pemilik). **Jangan menulis harga jasa**:
    keputusan pemilik "gratis konsultasi, harga sesuai kebutuhan". Fakta produk harus sesuai situs produknya
    (kasir.sissi.id, booth.sissi.id, lokatech.id) — jangan mengarang angka, klien, atau testimoni.
 6. **Token desain di `src/app/globals.css` (`@theme`)** — jangan hex mentah di komponen. Warna di `src/lib/og.ts`
@@ -36,15 +39,21 @@ Next.js 16 (App Router) · React 19 · Tailwind CSS 4 · TypeScript · lucide-re
 
 ## 2. Struktur
 
-- `src/app/` — `layout.tsx` (fon, metadata), `page.tsx` (urutan section + JSON-LD), `globals.css` (token),
-  `opengraph-image.tsx` (pratinjau tautan 1200×630, font OFL di `src/assets/fonts/`), `icon.svg`, `robots.ts`,
-  `sitemap.ts`, `not-found.tsx`.
-- `src/constants/content.ts` — semua teks & data (sumber tunggal copy, termasuk kontak dan nama PT).
+- `src/app/` — dua root layout per bahasa: `(id)/layout.tsx` + `(id)/page.tsx` (`/`) dan `(en)/layout.tsx` +
+  `(en)/en/page.tsx` (`/en`), masing-masing dengan `opengraph-image.tsx`. Bersama: `globals.css` (token),
+  `global-not-found.tsx` (404 dwibahasa; `experimental.globalNotFound`), `icon.svg`, `robots.ts`, `sitemap.ts`
+  (hreflang). Bahasa baru = kamus baru + root layout baru + tambah di `src/content/locales.ts`.
+- `src/content/` — `id.ts`, `en.ts` (kamus), `site.ts` (data bersama), `locales.ts` (daftar bahasa, alamat, aman
+  untuk client), `types.ts`, `index.ts` (`getDictionary`).
+- `src/components/HomePage.tsx` — beranda satu bahasa (urutan section + JSON-LD); `layout/RootDocument.tsx` (fon,
+  `<html lang>`), `layout/LanguageSwitch.tsx` (ID/EN di header).
 - `src/components/shared/` — `Container`, `SectionHeader`, `ButtonLink`, `Logo`, `ScreenFrame`, `cn`.
 - `src/components/layout/` — `Navbar` (client: menu HP), `Footer`.
-- `src/components/sections/` — satu berkas per section. Client component hanya `Navbar`, `Faq`, `Contact`.
+- `src/components/sections/` — satu berkas per section, teks lewat prop `t`. Client component hanya `Navbar`,
+  `Faq`, `Contact`.
 - `src/lib/seo.ts` — `siteUrl` (env `NEXT_PUBLIC_SITE_URL`, bawaan https://sissi.id), `contentUpdated`
-  (**ubah saat isi berubah**), JSON-LD Organization/WebSite/FAQPage.
+  (**ubah saat isi berubah**), `homeMetadata(locale)` (canonical + hreflang + Open Graph per bahasa),
+  `homeJsonLd(locale)` (Organization/WebSite/WebPage/FAQPage). `src/lib/og-image.tsx` — gambar OG per bahasa.
 - `public/brand/` — logo (salinan `../assets`); `public/products/` — tangkapan layar asli aplikasi & situs.
 - Formulir kontak **tanpa server**: menyusun pesan lalu membuka `wa.me` atau `mailto:`.
 

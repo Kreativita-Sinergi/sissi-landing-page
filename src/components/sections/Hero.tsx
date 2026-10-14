@@ -1,37 +1,38 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { hero } from "@/constants/content";
+import type { Dictionary } from "@/content";
+import type { WorkTone } from "@/content/types";
 import { ButtonLink } from "@/components/shared/ButtonLink";
 import { Container } from "@/components/shared/Container";
 import { cn } from "@/components/shared/cn";
 
-const tones = {
+const tones: Record<WorkTone, string> = {
   sand: "bg-sand",
   yellow: "bg-booth-yellow",
   loka: "bg-loka-bg",
   dark: "bg-ink",
-} as const;
+};
 
-export function Hero() {
+export function Hero({ t }: { t: Dictionary["hero"] }) {
   return (
     <section className="overflow-hidden border-b border-line">
       <Container className="grid items-center gap-14 pt-12 pb-16 sm:pt-16 lg:grid-cols-[1.1fr_1fr] lg:gap-12 lg:pt-16 lg:pb-20">
         <div className="animate-rise">
-          <p className="text-sm font-semibold text-brand-deep">{hero.eyebrow}</p>
+          <p className="text-sm font-semibold text-brand-deep">{t.eyebrow}</p>
           <h1 className="mt-4 text-[2.25rem] leading-[1.08] font-extrabold tracking-[-0.035em] text-balance sm:text-5xl xl:text-[3.25rem]">
-            {hero.title}
+            {t.title}
           </h1>
-          <p className="mt-5 max-w-xl text-lg leading-relaxed text-pretty text-muted">{hero.lead}</p>
+          <p className="mt-5 max-w-xl text-lg leading-relaxed text-pretty text-muted">{t.lead}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href={hero.primary.href}>
-              {hero.primary.label}
+            <ButtonLink href={t.primary.href}>
+              {t.primary.label}
               <ArrowRight className="size-4" />
             </ButtonLink>
-            <ButtonLink href={hero.secondary.href} variant="outline">
-              {hero.secondary.label}
+            <ButtonLink href={t.secondary.href} variant="outline">
+              {t.secondary.label}
             </ButtonLink>
           </div>
-          <p className="mt-3 text-sm text-faint">{hero.note}</p>
+          <p className="mt-3 text-sm text-faint">{t.note}</p>
         </div>
 
         {/* Gaya kolase: orang tanpa latar, potongan UI asli di belakang & di depan, label produk. */}
@@ -39,14 +40,14 @@ export function Hero() {
           <div aria-hidden className="absolute inset-x-[2%] top-[30%] bottom-[2%] rounded-[40px] bg-panel" />
 
           {/* Di belakang orang */}
-          <UiCard img={hero.ui.chart} className="top-[22%] -left-[3%] w-[52%]" />
-          <UiCard img={hero.ui.order} className="top-[34%] -right-[3%] w-[34%]" />
+          <UiCard img={t.ui.chart} className="top-[22%] -left-[3%] w-[52%]" />
+          <UiCard img={t.ui.order} className="top-[34%] -right-[3%] w-[34%]" />
 
           <Image
-            src={hero.person.src}
-            alt={hero.person.alt}
-            width={hero.person.width}
-            height={hero.person.height}
+            src={t.person.src}
+            alt={t.person.alt}
+            width={t.person.width}
+            height={t.person.height}
             priority
             sizes="(min-width: 1024px) 380px, 70vw"
             className="absolute bottom-[2%] left-1/2 z-10 w-[64%] -translate-x-[46%]"
@@ -54,7 +55,7 @@ export function Hero() {
 
           {/* Di depan orang */}
           <div className="absolute bottom-0 left-[1%] z-20 flex w-[50%] gap-[4%]">
-            {hero.ui.menu.map((m) => (
+            {t.ui.menu.map((m) => (
               <UiCard key={m.src} img={m} className="relative w-1/3" sizes="90px" />
             ))}
           </div>
@@ -62,17 +63,17 @@ export function Hero() {
           <div className="absolute top-[6%] right-0 z-20 flex items-center gap-2.5 rounded-2xl bg-surface py-2.5 pr-4 pl-2.5 shadow-[0_14px_30px_-16px_rgba(31,35,38,0.45)]">
             <Image src="/brand/sissi-mark.svg" alt="" width={32} height={32} className="size-8" />
             <span>
-              <span className="block text-sm leading-tight font-bold">{hero.badge.name}</span>
-              <span className="block text-[11px] leading-tight text-muted">{hero.badge.line}</span>
+              <span className="block text-sm leading-tight font-bold">{t.badge.name}</span>
+              <span className="block text-[11px] leading-tight text-muted">{t.badge.line}</span>
             </span>
           </div>
         </div>
       </Container>
 
       <Container className="pb-16 lg:pb-20">
-        <p className="border-b border-line pb-3 text-sm font-semibold text-muted">{hero.worksLabel}</p>
+        <p className="border-b border-line pb-3 text-sm font-semibold text-muted">{t.worksLabel}</p>
         <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-8 lg:grid-cols-4 lg:gap-x-6">
-          {hero.works.map((w) => {
+          {t.works.map((w) => {
             const isApp = w.tone === "sand" || w.tone === "yellow";
             return (
               <li key={w.name}>
@@ -92,7 +93,7 @@ export function Hero() {
                       )}
                     />
                   </div>
-                  <p className={cn("mt-3 text-xs font-semibold", w.kind === "Proyek klien" ? "text-brand-deep" : "text-faint")}>
+                  <p className={cn("mt-3 text-xs font-semibold", w.client ? "text-brand-deep" : "text-faint")}>
                     {w.kind}
                   </p>
                   <p className="mt-0.5 text-base font-bold tracking-[-0.01em] group-hover:underline group-hover:decoration-brand group-hover:decoration-2 group-hover:underline-offset-4">

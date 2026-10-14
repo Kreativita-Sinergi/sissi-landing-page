@@ -31,6 +31,9 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   cacheComponents: true,
+  // Situs punya dua root layout (per bahasa) → 404 global.
+  experimental: { globalNotFound: true },
+  partialPrefetching: true,
   poweredByHeader: false,
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];

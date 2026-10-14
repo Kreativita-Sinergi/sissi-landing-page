@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import { products, type Product } from "@/constants/content";
+import type { Dictionary, Product } from "@/content";
 import { Container } from "@/components/shared/Container";
 import { ScreenFrame } from "@/components/shared/ScreenFrame";
 import { SectionHeader } from "@/components/shared/SectionHeader";
@@ -35,14 +35,15 @@ function Visual({ visual, name }: { visual: Product["visual"]; name: string }) {
   );
 }
 
-export function Products() {
+export function Products({ t }: { t: Dictionary["products"] }) {
   return (
     <section id="produk" className="py-20 sm:py-28">
       <Container>
-        <SectionHeader eyebrow={products.eyebrow} title={products.title} body={products.body} />
+        <SectionHeader eyebrow={t.eyebrow} title={t.title} body={t.body} />
+        {t.languageNote ? <p className="mt-4 inline-block rounded-full bg-sand px-3 py-1.5 text-sm text-muted">{t.languageNote}</p> : null}
 
         <div className="mt-14 space-y-20 sm:mt-20 sm:space-y-28">
-          {products.items.map((p, i) => (
+          {t.items.map((p, i) => (
             <article key={p.id} id={`produk-${p.id}`} className="scroll-mt-24 grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
               <div className={cn(i % 2 === 1 && "lg:order-2")}>
                 <Visual visual={p.visual} name={p.name} />

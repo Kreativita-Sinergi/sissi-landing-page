@@ -1,19 +1,19 @@
 import { ArrowUp } from "lucide-react";
-import { footer, site } from "@/constants/content";
+import { site, type Dictionary } from "@/content";
 import { Container } from "@/components/shared/Container";
 import { Logo } from "@/components/shared/Logo";
 
-export function Footer() {
+export function Footer({ t }: { t: Dictionary["footer"] }) {
   return (
     <footer className="bg-ink text-on-dark">
       <Container className="grid gap-12 py-16 md:grid-cols-[1.4fr_1fr_1fr_1.3fr]">
         <div>
           <Logo light className="h-7 w-auto" />
           <p className="mt-5 font-semibold">{site.company}</p>
-          <p className="mt-1 max-w-xs text-sm leading-relaxed text-on-dark-muted">{footer.tagline}</p>
+          <p className="mt-1 max-w-xs text-sm leading-relaxed text-on-dark-muted">{t.tagline}</p>
         </div>
 
-        {footer.columns.map((col) => (
+        {t.columns.map((col) => (
           <div key={col.title}>
             <p className="font-mono text-xs tracking-[0.14em] text-on-dark-muted uppercase">{col.title}</p>
             <ul className="mt-4 space-y-2.5">
@@ -36,7 +36,7 @@ export function Footer() {
         ))}
 
         <div>
-          <p className="font-mono text-xs tracking-[0.14em] text-on-dark-muted uppercase">{footer.contactTitle}</p>
+          <p className="font-mono text-xs tracking-[0.14em] text-on-dark-muted uppercase">{t.contactTitle}</p>
           <ul className="mt-4 space-y-2.5 text-sm">
             <li>
               <a href={site.mailUrl} className="break-all transition-colors hover:text-brand">
@@ -57,10 +57,10 @@ export function Footer() {
 
       <Container className="flex flex-col gap-4 border-t border-white/10 py-6 text-xs text-on-dark-muted sm:flex-row sm:items-center sm:justify-between">
         <p>
-          © {site.year} {site.company}. {footer.rights}
+          © {site.year} {site.company}. {t.rights}
         </p>
         <a href="#" className="inline-flex items-center gap-1.5 transition-colors hover:text-on-dark">
-          {footer.backToTop}
+          {t.backToTop}
           <ArrowUp className="size-3.5" />
         </a>
       </Container>

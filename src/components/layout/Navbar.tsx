@@ -2,13 +2,15 @@
 
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { nav } from "@/constants/content";
+import type { Dictionary } from "@/content";
+import type { Locale } from "@/content/locales";
+import { LanguageSwitch } from "./LanguageSwitch";
 import { ButtonLink } from "@/components/shared/ButtonLink";
 import { Container } from "@/components/shared/Container";
 import { Logo } from "@/components/shared/Logo";
 import { cn } from "@/components/shared/cn";
 
-export function Navbar() {
+export function Navbar({ t, locale }: { t: Dictionary["nav"]; locale: Locale }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -39,7 +41,7 @@ export function Navbar() {
         </a>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Utama">
-          {nav.links.map((l) => (
+          {t.links.map((l) => (
             <a key={l.href} href={l.href} className="text-[15px] font-medium text-muted transition-colors hover:text-ink">
               {l.label}
             </a>
@@ -47,15 +49,16 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <ButtonLink href={nav.cta.href} className="min-h-10 px-5 text-sm max-sm:hidden">
-            {nav.cta.label}
+          <LanguageSwitch current={locale} label={t.language} />
+          <ButtonLink href={t.cta.href} className="min-h-10 px-5 text-sm max-sm:hidden">
+            {t.cta.label}
           </ButtonLink>
           <button
             type="button"
             className="inline-flex size-10 items-center justify-center rounded-full text-ink hover:bg-sand md:hidden"
             aria-expanded={open}
             aria-controls="menu-seluler"
-            aria-label={open ? nav.menuClose : nav.menuOpen}
+            aria-label={open ? t.menuClose : t.menuOpen}
             onClick={() => setOpen((v) => !v)}
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -65,7 +68,7 @@ export function Navbar() {
 
       <div id="menu-seluler" hidden={!open} className="border-t border-line bg-paper md:hidden">
         <Container className="flex flex-col py-3">
-          {nav.links.map((l) => (
+          {t.links.map((l) => (
             <a
               key={l.href}
               href={l.href}
@@ -75,8 +78,8 @@ export function Navbar() {
               {l.label}
             </a>
           ))}
-          <ButtonLink href={nav.cta.href} onClick={() => setOpen(false)} className="mt-3 mb-2 w-full">
-            {nav.cta.label}
+          <ButtonLink href={t.cta.href} onClick={() => setOpen(false)} className="mt-3 mb-2 w-full">
+            {t.cta.label}
           </ButtonLink>
         </Container>
       </div>

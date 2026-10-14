@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { site } from "@/constants/content";
+import { site } from "@/content";
 
 /** Logo horizontal Sissi (ikon + "sissi"). `light` untuk latar gelap. */
 export function Logo({ light = false, className }: { light?: boolean; className?: string }) {

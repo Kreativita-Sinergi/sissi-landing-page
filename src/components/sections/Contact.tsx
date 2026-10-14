@@ -2,12 +2,11 @@
 
 import { useState } from "react";
 import { ArrowUpRight, Mail, MessageCircle } from "lucide-react";
-import { contact, site } from "@/constants/content";
+import { site, type Dictionary } from "@/content";
 import { Container } from "@/components/shared/Container";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { cn } from "@/components/shared/cn";
 
-const f = contact.form;
 type Errors = Partial<Record<"name" | "services" | "message", string>>;
 
 function Chip({ selected, onClick, children }: { selected: boolean; onClick: () => void; children: React.ReactNode }) {
@@ -39,7 +38,13 @@ const fieldClass =
   "w-full rounded-xl border border-line-strong bg-surface px-4 py-3 text-base text-ink placeholder:text-faint transition-colors focus:border-ink focus:outline-none aria-invalid:border-brand-deep";
 
 /** Formulir tanpa server: menyusun pesan lalu membuka WhatsApp atau aplikasi email. */
-export function Contact() {
+export function Contact({ t }: { t: Dictionary["contact"] }) {
+  const f = t.form;
+  const direct = [
+    { label: t.labels.whatsapp, value: site.phoneDisplay, href: site.whatsappUrl as string | null },
+    { label: t.labels.email, value: site.email, href: site.mailUrl as string | null },
+    { label: t.labels.location, value: `${site.city}, ${site.region}`, href: null },
+  ];
   const [name, setName] = useState("");
   const [business, setBusiness] = useState("");
   const [picked, setPicked] = useState<string[]>([]);
@@ -92,9 +97,9 @@ export function Contact() {
     <section id="kontak" className="border-t border-line bg-surface py-20 sm:py-28">
       <Container className="grid gap-14 lg:grid-cols-[1fr_1.5fr] lg:gap-20">
         <div>
-          <SectionHeader eyebrow={contact.eyebrow} title={contact.title} body={contact.body} />
+          <SectionHeader eyebrow={t.eyebrow} title={t.title} body={t.body} />
           <ul className="mt-10 border-t border-line">
-            {contact.direct.map((d) => (
+            {direct.map((d) => (
               <li key={d.label} className="flex items-baseline justify-between gap-4 border-b border-line py-4">
                 <span className="font-mono text-[11px] tracking-[0.12em] text-faint uppercase">{d.label}</span>
                 {d.href ? (
@@ -112,7 +117,7 @@ export function Contact() {
               </li>
             ))}
           </ul>
-          <p className="mt-6 text-sm text-muted">{contact.note}</p>
+          <p className="mt-6 text-sm text-muted">{t.note}</p>
         </div>
 
         <form

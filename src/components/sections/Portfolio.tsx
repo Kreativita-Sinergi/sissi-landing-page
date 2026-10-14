@@ -1,18 +1,18 @@
 import { ArrowUpRight } from "lucide-react";
-import { portfolio } from "@/constants/content";
+import type { Dictionary } from "@/content";
 import { Container } from "@/components/shared/Container";
 import { ScreenFrame } from "@/components/shared/ScreenFrame";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { cn } from "@/components/shared/cn";
 
-export function Portfolio() {
+export function Portfolio({ t }: { t: Dictionary["portfolio"] }) {
   return (
     <section id="portofolio" className="py-20 sm:py-28">
       <Container>
-        <SectionHeader eyebrow={portfolio.eyebrow} title={portfolio.title} body={portfolio.body} />
+        <SectionHeader eyebrow={t.eyebrow} title={t.title} body={t.body} />
 
         <ul className="mt-12 grid gap-x-8 gap-y-12 md:grid-cols-2">
-          {portfolio.items.map((item) => (
+          {t.items.map((item) => (
             <li key={item.href} className={cn(item.featured && "md:col-span-2")}>
               <a
                 href={item.href}
@@ -24,7 +24,7 @@ export function Portfolio() {
                   kind="browser"
                   url={item.domain}
                   src={item.image}
-                  alt={`Tampilan situs ${item.name}`}
+                  alt={`${t.imageAlt} ${item.name}`}
                   width={1440}
                   height={900}
                   sizes={item.featured ? "(min-width: 768px) 640px, 92vw" : "(min-width: 768px) 540px, 92vw"}
@@ -34,7 +34,7 @@ export function Portfolio() {
                   <p
                     className={cn(
                       "inline-block rounded-full px-2.5 py-1 text-xs font-semibold",
-                      item.kind === "Proyek klien" ? "bg-ink text-on-dark" : "bg-sand text-muted",
+                      item.client ? "bg-ink text-on-dark" : "bg-sand text-muted",
                     )}
                   >
                     {item.kind}
@@ -46,7 +46,7 @@ export function Portfolio() {
                     {item.summary}
                   </p>
                   <p className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-ink group-hover:text-brand-deep">
-                    {portfolio.visit} {item.domain}
+                    {t.visit} {item.domain}
                     <ArrowUpRight className="size-4" />
                   </p>
                 </div>

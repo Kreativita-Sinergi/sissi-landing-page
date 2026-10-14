@@ -3,7 +3,7 @@
 > **Dokumen hidup.** Agent/kontributor WAJIB membacanya di awal sesi dan memperbaruinya di akhir sesi.
 > Hanya lokal di repo ini.
 
-Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (kartu menu rapi, label Sissi, judul umum)
+Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (dua bahasa ID/EN + SEO per bahasa)
 
 ## Menunggu reviu sebelum merge
 
@@ -25,6 +25,10 @@ _(kosong)_
 
 ## Backlog (belum dikerjakan)
 
+- [ ] **P2 · Tinjau terjemahan Inggris** — `src/content/en.ts` ditulis Claude; minta penutur fasih memeriksa, terutama
+  FAQ "Do you work with clients outside Indonesia? … in English or Indonesian" (klaim layanan berbahasa Inggris).
+- [ ] **P3 · Peringatan build `metadataBase`** — muncul dari 404 bawaan Next (`/_not-found`), semua halaman kita sudah
+  memasang `metadataBase`; tidak berdampak, abaikan atau periksa saat Next diperbarui.
 - [ ] **P1 · Lisensi foto hero** — `public/hero/orang-buku.webp` dari file yang diberikan pemilik; nama filenya mirip
   foto stok Freepik. Pastikan lisensinya (Freepik gratis mewajibkan atribusi; premium tidak). Bila perlu atribusi,
   tambahkan di footer.
@@ -46,6 +50,15 @@ _(kosong)_
 
 ## Selesai (terbaru di atas)
 
+- **2026-10-14 · Dua bahasa (ID/EN) + SEO per bahasa (L; Claude Opus 5.5; disetujui pemilik)** — keputusan pemilik:
+  hanya Indonesia & Inggris; produk tidak dipaksa berbahasa Inggris (nama & tagline tetap Indonesia, ada catatan
+  "products are currently available in Indonesian"); WA & email sama. `src/constants/content.ts` dipecah jadi kamus
+  `src/content/{id,en}.ts` (+ `site.ts`, `locales.ts`); komponen menerima teks lewat prop. Route: dua root layout
+  `(id)` → `/`, `(en)` → `/en` (statis, `<html lang>` benar, tanpa pengalihan otomatis), `global-not-found.tsx`
+  dwibahasa. Tombol ID/EN di header (desktop & HP). SEO: canonical per bahasa, hreflang id/en/x-default, og:locale +
+  alternatif, gambar OG per bahasa, sitemap dengan `xhtml:link` alternatif, JSON-LD WebPage/FAQPage ber-`inLanguage`.
+  Template pesan WhatsApp/email ikut bahasa. Diverifikasi: build statis, curl (lang, canonical, hreflang, 404,
+  sitemap, OG), Playwright (ganti bahasa dari header HP, formulir EN, FAQ EN).
 - **2026-10-14 · Rapikan hero (XS; Claude Opus 5.5; masukan pemilik)** — kartu menu dipotong tanpa tepi/sudut
   bawaan aplikasi (sebelumnya garis dobel); file diganti nama `menu-*.webp` agar cache gambar tidak memakai versi
   lama. Label "Sissi Kasir" → "Sissi · Software, aplikasi & IoT". Judul → "Kami membuat software untuk usahamu."

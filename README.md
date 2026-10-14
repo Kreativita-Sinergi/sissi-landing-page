@@ -10,7 +10,8 @@ npm run dev     # http://localhost:3100
 npm run build
 ```
 
-- Teks & kontak: `src/constants/content.ts`
+- Dua bahasa: Indonesia di `/`, Inggris di `/en`
+- Teks: `src/content/id.ts` dan `src/content/en.ts`; kontak & nama PT: `src/content/site.ts`
 - Warna & fon: `src/app/globals.css`
 - Alamat situs untuk SEO: env `NEXT_PUBLIC_SITE_URL` (bawaan `https://sissi.id`)
 
