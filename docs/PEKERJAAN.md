@@ -3,7 +3,7 @@
 > **Dokumen hidup.** Agent/kontributor WAJIB membacanya di awal sesi dan memperbaruinya di akhir sesi.
 > Hanya lokal di repo ini.
 
-Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (hero dua kolom: karya di kanan)
+Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (hero: foto + simbol S, judul lebih kecil)
 
 ## Menunggu reviu sebelum merge
 
@@ -25,6 +25,9 @@ _(kosong)_
 
 ## Backlog (belum dikerjakan)
 
+- [ ] **P2 · Foto hero asli** — `public/hero/konsultasi.webp` = foto stok Unsplash
+  (https://unsplash.com/photos/a-person-sitting-on-a-table-with-a-laptop-6G6akT8biLg, lisensi Unsplash). Ganti dengan
+  foto tim/kantor/pemasangan asli bila ada (potret 4:5, ±960×1200).
 - [ ] **P2 · Tangkapan layar aplikasi Loka Accounting** — produk Loka kini memakai panel tipografi (belum ada
   tangkapan layar aplikasi di Dev/Sissi). Ganti dengan layar asli bila tersedia (`src/constants/content.ts` →
   `products.items[loka].visual`).
@@ -40,6 +43,11 @@ _(kosong)_
 
 ## Selesai (terbaru di atas)
 
+- **2026-10-14 · Hero: foto + simbol S (S; Claude Opus 5.5; masukan pemilik)** — pemilik tidak mau kartu karya
+  maupun tangkapan layar aplikasi di kanan hero; contoh yang disukai: gamatechno.com (foto orang + bentuk merek, tanpa
+  slider). Kanan hero kini foto orang (Unsplash, gratis komersial) di atas simbol S logo yang diperbesar, plus 2 label
+  (lokasi, konsultasi gratis). Deret "Yang sudah kami buat" kembali di bawah hero. Judul hero dikecilkan
+  (maks 3,25rem).
 - **2026-10-14 · Hero dua kolom (S; Claude Opus 5.5; masukan pemilik)** — sisi kanan judul terasa kosong. Alih-alih
   gambar dekoratif, deret "Yang sudah kami buat" (4 kartu) dipindah ke kanan judul sebagai grid 2×2; di HP tetap di
   bawah teks. Dicek 1440, 1280, dan 390 px tanpa luapan.

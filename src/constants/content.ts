@@ -43,6 +43,13 @@ export const hero = {
   primary: { label: "Konsultasi gratis", href: "#kontak" },
   secondary: { label: "Lihat layanan", href: "#layanan" },
   note: "Konsultasi gratis · Harga sesuai kebutuhan",
+  photo: {
+    src: "/hero/konsultasi.webp",
+    // Foto: Unsplash (lisensi Unsplash, bebas pakai komersial). Ganti dengan foto tim asli bila sudah ada.
+    alt: "Perempuan tersenyum melambaikan tangan saat panggilan video di depan laptop",
+  },
+  chipConsult: { title: "Konsultasi gratis", body: "Lewat WhatsApp, video call, atau tatap muka" },
+  chipPlace: "Pekanbaru · melayani seluruh Indonesia",
   worksLabel: "Yang sudah kami buat",
   works: [
     {
