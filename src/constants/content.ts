@@ -43,13 +43,18 @@ export const hero = {
   primary: { label: "Konsultasi gratis", href: "#kontak" },
   secondary: { label: "Lihat layanan", href: "#layanan" },
   note: "Konsultasi gratis · Harga sesuai kebutuhan",
-  photo: {
-    src: "/hero/konsultasi.webp",
-    // Foto: Unsplash (lisensi Unsplash, bebas pakai komersial). Ganti dengan foto tim asli bila sudah ada.
-    alt: "Perempuan tersenyum melambaikan tangan saat panggilan video di depan laptop",
+  person: {
+    src: "/hero/orang.webp",
+    // Foto: Unsplash (lisensi Unsplash, bebas pakai komersial), latar dihapus. Ganti dengan foto tim asli bila ada.
+    alt: "Perempuan berkacamata tersenyum sambil memegang laptop",
+    width: 800,
+    height: 878,
   },
-  chipConsult: { title: "Konsultasi gratis", body: "Lewat WhatsApp, video call, atau tatap muka" },
-  chipPlace: "Pekanbaru · melayani seluruh Indonesia",
+  floats: [
+    { src: "/products/laporan-tablet.webp", alt: "Laporan jam ramai di Sissi Kasir", width: 1280, height: 800 },
+    { src: "/products/kasir-hp.webp", alt: "Sissi Kasir di HP", width: 390, height: 844 },
+    { src: "/products/booth-hias.png", alt: "Layar hias foto Sissi Booth", width: 1440, height: 900 },
+  ],
   worksLabel: "Yang sudah kami buat",
   works: [
     {

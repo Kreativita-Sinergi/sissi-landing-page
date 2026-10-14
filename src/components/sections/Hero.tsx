@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, MapPin, MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { hero } from "@/constants/content";
 import { ButtonLink } from "@/components/shared/ButtonLink";
 import { Container } from "@/components/shared/Container";
@@ -34,34 +34,22 @@ export function Hero() {
           <p className="mt-3 text-sm text-faint">{hero.note}</p>
         </div>
 
-        {/* Foto + satu lingkaran oranye polos di belakangnya. */}
-        <div className="relative mx-auto w-full max-w-[340px] animate-rise sm:max-w-[400px] [animation-delay:150ms] lg:mr-0">
-          <div aria-hidden className="absolute -top-8 -right-10 aspect-square w-[78%] rounded-full bg-brand sm:-right-14" />
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] bg-sand shadow-[0_30px_60px_-30px_rgba(31,35,38,0.5)]">
-            <Image
-              src={hero.photo.src}
-              alt={hero.photo.alt}
-              fill
-              priority
-              sizes="(min-width: 1024px) 420px, 90vw"
-              className="object-cover"
-            />
-          </div>
+        {/* Orang (latar dihapus) di depan panel oranye + tangkapan layar asli produk yang melayang. */}
+        <div className="relative mx-auto aspect-[1/1.02] w-full max-w-[360px] animate-rise [animation-delay:150ms] sm:max-w-[480px] lg:mr-0">
+          <div aria-hidden className="absolute inset-x-[6%] top-[30%] bottom-0 rounded-[36px] bg-brand" />
+          <Image
+            src={hero.person.src}
+            alt={hero.person.alt}
+            width={hero.person.width}
+            height={hero.person.height}
+            priority
+            sizes="(min-width: 1024px) 420px, 80vw"
+            className="absolute bottom-0 left-1/2 w-[84%] -translate-x-[44%]"
+          />
 
-          <div className="absolute -bottom-6 -left-4 flex max-w-[78%] items-start gap-3 rounded-2xl border border-line bg-surface p-4 shadow-[0_18px_40px_-20px_rgba(31,35,38,0.45)] sm:-left-10">
-            <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-brand text-on-brand">
-              <MessageCircle className="size-4" />
-            </span>
-            <span>
-              <span className="block text-sm font-bold">{hero.chipConsult.title}</span>
-              <span className="mt-0.5 block text-[13px] leading-snug text-muted">{hero.chipConsult.body}</span>
-            </span>
-          </div>
-
-          <div className="absolute top-5 -left-3 inline-flex items-center gap-1.5 rounded-full bg-ink px-3.5 py-2 text-xs font-semibold text-on-dark sm:-left-8">
-            <MapPin className="size-3.5 text-brand" />
-            {hero.chipPlace}
-          </div>
+          <Float className="top-[12%] -left-[4%] w-[46%] sm:-left-[10%]" img={hero.floats[0]} />
+          <Float className="top-[44%] -right-[2%] w-[22%] sm:-right-[6%]" img={hero.floats[1]} rounded="rounded-[14px]" />
+          <Float className="bottom-[7%] -left-[2%] w-[40%] sm:-left-[8%]" img={hero.floats[2]} />
         </div>
       </Container>
 
@@ -102,5 +90,22 @@ export function Hero() {
         </ul>
       </Container>
     </section>
+  );
+}
+
+type FloatImg = { src: string; alt: string; width: number; height: number };
+
+/** Kartu tangkapan layar yang melayang di hero. */
+function Float({ img, className, rounded = "rounded-xl" }: { img: FloatImg; className: string; rounded?: string }) {
+  return (
+    <div
+      className={cn(
+        "absolute overflow-hidden border-4 border-surface bg-surface shadow-[0_24px_50px_-18px_rgba(31,35,38,0.45)]",
+        rounded,
+        className,
+      )}
+    >
+      <Image src={img.src} alt={img.alt} width={img.width} height={img.height} sizes="220px" className="block h-auto w-full" />
+    </div>
   );
 }

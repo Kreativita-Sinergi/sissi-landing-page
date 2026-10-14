@@ -3,7 +3,7 @@
 > **Dokumen hidup.** Agent/kontributor WAJIB membacanya di awal sesi dan memperbaruinya di akhir sesi.
 > Hanya lokal di repo ini.
 
-Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (hero: latar foto jadi lingkaran polos)
+Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (hero: orang tanpa latar + layar produk melayang)
 
 ## Menunggu reviu sebelum merge
 
@@ -25,9 +25,10 @@ _(kosong)_
 
 ## Backlog (belum dikerjakan)
 
-- [ ] **P2 · Foto hero asli** — `public/hero/konsultasi.webp` = foto stok Unsplash
-  (https://unsplash.com/photos/a-person-sitting-on-a-table-with-a-laptop-6G6akT8biLg, lisensi Unsplash). Ganti dengan
-  foto tim/kantor/pemasangan asli bila ada (potret 4:5, ±960×1200).
+- [ ] **P2 · Foto hero asli** — `public/hero/orang.webp` = foto stok Unsplash berlatar dihapus
+  (https://unsplash.com/photos/a-woman-holding-a-laptop-computer-on-a-yellow-background-0f6vnmUsZ08, lisensi Unsplash).
+  Ganti dengan foto anggota tim asli bila ada: latar polos, setengah badan; potong dengan Vision macOS seperti catatan
+  2026-10-14, simpan WebP transparan ±800 px lebar.
 - [ ] **P2 · Tangkapan layar aplikasi Loka Accounting** — produk Loka kini memakai panel tipografi (belum ada
   tangkapan layar aplikasi di Dev/Sissi). Ganti dengan layar asli bila tersedia (`src/constants/content.ts` →
   `products.items[loka].visual`).
@@ -43,6 +44,11 @@ _(kosong)_
 
 ## Selesai (terbaru di atas)
 
+- **2026-10-14 · Hero: orang tanpa latar + layar melayang (S; Claude Opus 5.5; masukan pemilik)** — pemilik ingin gaya
+  seperti contoh (orang dipotong dari latar, tangkapan layar aplikasi boleh). Foto Unsplash berlatar polos dipotong
+  dengan Vision macOS (`VNGenerateForegroundInstanceMaskRequest`, offline), tepi dirapikan (spill kuning), dipotong
+  sampai pinggang → `public/hero/orang.webp` (transparan). Komposisi: panel oranye membulat di belakang + 3 layar asli
+  melayang (laporan Kasir, Kasir HP, hias Booth). Foto lama `konsultasi.webp` dihapus.
 - **2026-10-14 · Latar foto hero (XS; Claude Opus 5.5; masukan pemilik)** — simbol S yang diperbesar di belakang foto
   terlihat berantakan (tepi jiplakan bergelombang). Diganti satu lingkaran oranye polos di kanan atas foto.
 - **2026-10-14 · Hero: foto + simbol S (S; Claude Opus 5.5; masukan pemilik)** — pemilik tidak mau kartu karya
