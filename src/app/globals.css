@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* Token desain sissi.id. Warna merek dari logo (assets/sissi-logo.svg): oranye #F1702C, arang #292E31. */
+@theme {
+  --color-brand: #f1702c;
+  --color-brand-hover: #f5844a;
+  --color-brand-press: #e3631f;
+  --color-brand-deep: #b84a12; /* teks oranye di atas latar terang (kontras AA) */
+  --color-brand-soft: #fdeee5;
+  --color-ink: #1f2326;
+  --color-charcoal: #292e31;
+  --color-paper: #fbfaf8;
+  --color-surface: #ffffff;
+  --color-sand: #f3f0eb;
+  --color-line: #e6e2dc;
+  --color-line-strong: #d3cec6;
+  --color-muted: #5b6064;
+  --color-faint: #8a8f93;
+  --color-on-dark: #f4f2ee;
+  --color-on-dark-muted: #a9adb0;
+
+  /* Warna merek produk lain, hanya untuk panel visualnya. */
+  --color-booth-yellow: #ffe24a;
+  --color-loka-bg: #0b1016;
+  --color-loka-fg: #e6f6f7;
+  --color-loka-accent: #6fe0e4;
+  --color-loka-soft: #b8e9eb;
+
+  --font-sans: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+
+  --animate-rise: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+::selection {
+  background: var(--color-brand);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
