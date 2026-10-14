@@ -36,7 +36,7 @@ export function Hero() {
 
         {/* Orang (latar dihapus) di depan panel oranye + tangkapan layar asli produk yang melayang. */}
         <div className="relative mx-auto aspect-[1/1.02] w-full max-w-[360px] animate-rise [animation-delay:150ms] sm:max-w-[480px] lg:mr-0">
-          <div aria-hidden className="absolute inset-x-[6%] top-[30%] bottom-0 rounded-[36px] bg-brand" />
+          <div aria-hidden className="absolute inset-x-[6%] top-[40%] bottom-0 rounded-[36px] bg-brand" />
           <Image
             src={hero.person.src}
             alt={hero.person.alt}
@@ -44,11 +44,11 @@ export function Hero() {
             height={hero.person.height}
             priority
             sizes="(min-width: 1024px) 420px, 80vw"
-            className="absolute bottom-0 left-1/2 w-[84%] -translate-x-[44%]"
+            className="absolute bottom-0 left-1/2 w-[62%] -translate-x-[50%]"
           />
 
-          <Float className="top-[12%] -left-[4%] w-[46%] sm:-left-[10%]" img={hero.floats[0]} />
-          <Float className="top-[44%] -right-[2%] w-[22%] sm:-right-[6%]" img={hero.floats[1]} rounded="rounded-[14px]" />
+          <Float className="top-[20%] -left-[4%] w-[42%] sm:-left-[8%]" img={hero.floats[0]} />
+          <Float className="top-[50%] -right-[2%] w-[22%] sm:-right-[4%]" img={hero.floats[1]} rounded="rounded-[14px]" />
           <Float className="bottom-[7%] -left-[2%] w-[40%] sm:-left-[8%]" img={hero.floats[2]} />
         </div>
       </Container>

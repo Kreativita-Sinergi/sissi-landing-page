@@ -44,11 +44,11 @@ export const hero = {
   secondary: { label: "Lihat layanan", href: "#layanan" },
   note: "Konsultasi gratis · Harga sesuai kebutuhan",
   person: {
-    src: "/hero/orang.webp",
+    src: "/hero/potret.webp",
     // Foto: Unsplash (lisensi Unsplash, bebas pakai komersial), latar dihapus. Ganti dengan foto tim asli bila ada.
-    alt: "Perempuan berkacamata tersenyum sambil memegang laptop",
-    width: 800,
-    height: 878,
+    alt: "Perempuan berkerudung merah muda tersenyum ke arah kamera",
+    width: 900,
+    height: 992,
   },
   floats: [
     { src: "/products/laporan-tablet.webp", alt: "Laporan jam ramai di Sissi Kasir", width: 1280, height: 800 },
