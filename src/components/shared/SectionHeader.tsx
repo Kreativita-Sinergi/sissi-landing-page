@@ -8,29 +8,21 @@ type Props = {
   className?: string;
 };
 
-/** Judul section: label kecil bergaris, judul besar, paragraf pendek opsional. */
+/** Judul section: label pendek, judul besar, paragraf opsional. */
 export function SectionHeader({ eyebrow, title, body, dark = false, className }: Props) {
   return (
-    <div className={cn("max-w-2xl", className)}>
-      <p
-        className={cn(
-          "flex items-center gap-3 font-mono text-xs font-medium tracking-[0.14em] uppercase",
-          dark ? "text-brand" : "text-brand-deep",
-        )}
-      >
-        <span aria-hidden className="h-px w-6 bg-current" />
-        {eyebrow}
-      </p>
+    <div className={cn("max-w-3xl", className)}>
+      <p className={cn("text-sm font-semibold", dark ? "text-brand" : "text-brand-deep")}>{eyebrow}</p>
       <h2
         className={cn(
-          "mt-4 text-3xl leading-[1.12] font-bold tracking-[-0.025em] text-balance sm:text-4xl",
+          "mt-3 text-3xl leading-[1.1] font-extrabold tracking-[-0.03em] text-balance sm:text-[2.6rem]",
           dark ? "text-on-dark" : "text-ink",
         )}
       >
         {title}
       </h2>
       {body ? (
-        <p className={cn("mt-4 text-base leading-relaxed text-pretty sm:text-lg", dark ? "text-on-dark-muted" : "text-muted")}>
+        <p className={cn("mt-4 max-w-2xl text-base leading-relaxed text-pretty sm:text-lg", dark ? "text-on-dark-muted" : "text-muted")}>
           {body}
         </p>
       ) : null}

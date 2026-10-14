@@ -1,4 +1,4 @@
-import { ArrowUpRight, Check } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { products, type Product } from "@/constants/content";
 import { Container } from "@/components/shared/Container";
 import { ScreenFrame } from "@/components/shared/ScreenFrame";
@@ -43,7 +43,7 @@ export function Products() {
 
         <div className="mt-14 space-y-20 sm:mt-20 sm:space-y-28">
           {products.items.map((p, i) => (
-            <article key={p.id} className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
+            <article key={p.id} id={`produk-${p.id}`} className="scroll-mt-24 grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
               <div className={cn(i % 2 === 1 && "lg:order-2")}>
                 <Visual visual={p.visual} name={p.name} />
               </div>
@@ -55,15 +55,14 @@ export function Products() {
                 <p className="mt-1 font-mono text-xs text-faint">{p.domain}</p>
                 <p className="mt-5 text-xl leading-snug font-semibold tracking-[-0.015em] text-ink sm:text-2xl">{p.tagline}</p>
                 <p className="mt-3 leading-relaxed text-pretty text-muted">{p.body}</p>
-                <ul className="mt-6 grid gap-2.5 sm:grid-cols-2">
+                <ul className="mt-6 grid border-t border-line sm:grid-cols-2 sm:gap-x-6">
                   {p.points.map((pt) => (
-                    <li key={pt} className="flex gap-2.5 text-[15px] leading-snug">
-                      <Check className="mt-0.5 size-4 shrink-0 text-brand" strokeWidth={2.5} />
+                    <li key={pt} className="border-b border-line py-2.5 text-[15px] leading-snug">
                       {pt}
                     </li>
                   ))}
                 </ul>
-                <p className="mt-6 border-t border-line pt-4 text-sm text-muted">{p.audience}</p>
+                <p className="mt-4 text-sm text-muted">{p.audience}</p>
                 <a
                   href={p.href}
                   target="_blank"

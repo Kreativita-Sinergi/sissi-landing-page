@@ -27,10 +27,9 @@ async function render() {
         }}
       >
         <img src={logo} width={186} height={60} alt="" />
-        <div style={{ display: "flex", flexWrap: "wrap", fontSize: 76, fontWeight: 800, lineHeight: 1.06, letterSpacing: -2.5, maxWidth: 1000 }}>
-          <span>{hero.titleLead}&nbsp;</span>
-          <span style={{ color: brand.orange }}>{hero.titleAccent}&nbsp;</span>
-          <span>{hero.titleTail}</span>
+        <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
+          <div style={{ display: "flex", fontSize: 84, fontWeight: 800, lineHeight: 1.04, letterSpacing: -3 }}>{hero.title}</div>
+          <div style={{ display: "flex", fontSize: 30, fontWeight: 500, lineHeight: 1.45, color: brand.muted, maxWidth: 980 }}>{hero.lead}</div>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 26, fontWeight: 500, color: brand.muted }}>
           <span>{site.company}</span>

@@ -11,9 +11,9 @@ export function Portfolio() {
       <Container>
         <SectionHeader eyebrow={portfolio.eyebrow} title={portfolio.title} body={portfolio.body} />
 
-        <ul className="mt-12 grid gap-x-6 gap-y-12 md:grid-cols-3">
+        <ul className="mt-12 grid gap-x-8 gap-y-12 md:grid-cols-2">
           {portfolio.items.map((item) => (
-            <li key={item.href} className={cn(item.featured && "md:col-span-3")}>
+            <li key={item.href} className={cn(item.featured && "md:col-span-2")}>
               <a
                 href={item.href}
                 target="_blank"
@@ -27,7 +27,7 @@ export function Portfolio() {
                   alt={`Tampilan situs ${item.name}`}
                   width={1440}
                   height={900}
-                  sizes={item.featured ? "(min-width: 768px) 640px, 92vw" : "(min-width: 768px) 360px, 92vw"}
+                  sizes={item.featured ? "(min-width: 768px) 640px, 92vw" : "(min-width: 768px) 540px, 92vw"}
                   className="transition-transform duration-300 group-hover:-translate-y-1"
                 />
                 <div className={cn(!item.featured && "mt-5")}>

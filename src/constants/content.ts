@@ -25,8 +25,8 @@ export const site = {
 
 export const nav = {
   links: [
-    { label: "Produk", href: "#produk" },
     { label: "Layanan", href: "#layanan" },
+    { label: "Produk", href: "#produk" },
     { label: "Portofolio", href: "#portofolio" },
     { label: "Tentang", href: "#tentang" },
     { label: "FAQ", href: "#faq" },
@@ -38,24 +38,53 @@ export const nav = {
 
 export const hero = {
   eyebrow: `${site.company} · ${site.city}`,
-  titleLead: "Kami membangun software",
-  titleAccent: "yang dipakai usaha",
-  titleTail: "setiap hari.",
-  body: "Kasir yang tetap jalan saat internet mati. Photobox yang menerima QRIS sendiri. Pembukuan yang rapi tanpa buku tulis. Semua itu produk kami sendiri, dan pengalaman yang sama kami pakai untuk membangun website, aplikasi, dan perangkat IoT untuk usahamu.",
+  title: "Software house dari Pekanbaru.",
+  lead: "Produk kami dipakai usaha setiap hari, dan kami bisa membuatkan punyamu: website, aplikasi, sistem, sampai IoT.",
   primary: { label: "Konsultasi gratis", href: "#kontak" },
-  secondary: { label: "Lihat produk kami", href: "#produk" },
+  secondary: { label: "Lihat layanan", href: "#layanan" },
   note: "Konsultasi gratis · Harga sesuai kebutuhan",
-  shotTablet: { src: "/products/kasir-tablet.webp", alt: "Layar kasir Sissi Kasir di tablet: daftar menu dan pesanan" },
-  shotPhone: { src: "/products/kasir-hp.webp", alt: "Layar kasir Sissi Kasir di HP" },
-  shotCaption: "Sissi Kasir, layar asli aplikasi",
-} as const;
-
-export const trust = {
-  label: "Sedang berjalan",
-  items: [
-    { name: "Sissi Kasir", href: "https://kasir.sissi.id/", domain: "kasir.sissi.id" },
-    { name: "Sissi Booth", href: "https://booth.sissi.id/", domain: "booth.sissi.id" },
-    { name: "Loka Accounting", href: "https://lokatech.id/", domain: "lokatech.id" },
+  worksLabel: "Yang sudah kami buat",
+  works: [
+    {
+      name: "Sissi Kasir",
+      kind: "Produk kami",
+      line: "Kasir Android yang tetap jalan saat internet mati",
+      href: "#produk-kasir",
+      image: "/products/kasir-tablet.webp",
+      width: 1280,
+      height: 800,
+      tone: "sand",
+    },
+    {
+      name: "Sissi Booth",
+      kind: "Produk kami",
+      line: "Aplikasi photobox dengan QRIS otomatis",
+      href: "#produk-booth",
+      image: "/products/booth-hias.png",
+      width: 1440,
+      height: 900,
+      tone: "yellow",
+    },
+    {
+      name: "Loka Accounting",
+      kind: "Produk kami",
+      line: "Akuntansi online untuk bisnis Indonesia",
+      href: "#produk-loka",
+      image: "/products/site-lokatech.jpg",
+      width: 1440,
+      height: 900,
+      tone: "loka",
+    },
+    {
+      name: "pilihfotomu",
+      kind: "Proyek klien",
+      line: "Booking dan pilih foto online untuk fotografer",
+      href: "#portofolio",
+      image: "/products/site-pilihfotomu.jpg",
+      width: 1440,
+      height: 900,
+      tone: "dark",
+    },
   ],
 } as const;
 
@@ -77,7 +106,7 @@ export type Product = {
 
 export const products = {
   eyebrow: "Produk",
-  title: "Tiga produk yang kami bangun dan rawat sendiri.",
+  title: "Produk yang kami bangun dan rawat sendiri.",
   body: "Setiap produk lahir dari masalah nyata di usaha sekitar kami. Kami memakainya, memperbaikinya, dan terus menambah fitur dari masukan pengguna.",
   items: [
     {
@@ -157,45 +186,52 @@ export const products = {
 
 export const services = {
   eyebrow: "Layanan",
-  title: "Butuh sistem sendiri? Kami bangun dari nol.",
-  body: "Tim yang membuat produk di atas juga menerima proyek. Kamu bicara langsung dengan orang yang menulis kodenya.",
+  title: "Ceritakan masalahnya. Kami yang memikirkan sistemnya.",
+  body: "Tim yang membuat Sissi Kasir, Sissi Booth, dan Loka Accounting juga menerima proyek. Kamu bicara langsung dengan orang yang menulis kodenya.",
+  problemLabel: "Masalahnya",
+  solutionLabel: "Yang kami buat",
+  exampleLabel: "Contoh",
   items: [
     {
-      title: "Website",
-      body: "Profil perusahaan, landing page, katalog, sampai toko online. Cepat dibuka, mudah ditemukan di Google, dan mudah diperbarui.",
-      tags: ["Company profile", "Landing page", "Toko online"],
+      name: "Website",
+      problem: "Usahamu tidak muncul saat dicari di Google, atau situsnya lambat dan susah diubah.",
+      solution: "Situs yang cepat dibuka, rapi di HP, dan isinya bisa kamu perbarui sendiri.",
+      example: { label: "kasir.sissi.id dan booth.sissi.id", href: "https://booth.sissi.id/" },
     },
     {
-      title: "Aplikasi mobile & web",
-      body: "Aplikasi Android, iOS, dan dashboard web. Bisa dibuat tetap berfungsi saat offline, seperti Sissi Kasir.",
-      tags: ["Android", "iOS", "Dashboard"],
+      name: "Aplikasi mobile & web",
+      problem: "Pesanan, stok, atau jadwal masih dicatat di kertas dan grup WhatsApp.",
+      solution: "Aplikasi Android, iOS, atau web yang mengikuti alur kerjamu, dan tetap jalan saat sinyal hilang.",
+      example: { label: "Sissi Kasir, kasir offline untuk HP dan tablet", href: "https://kasir.sissi.id/" },
     },
     {
-      title: "Sistem custom & integrasi",
-      body: "Kasir, inventori, booking, atau sistem internal sesuai alur kerjamu. Terhubung ke QRIS, payment gateway, WhatsApp, dan printer.",
-      tags: ["QRIS", "WhatsApp", "Printer thermal"],
+      name: "Sistem & integrasi",
+      problem: "Kasir, pembayaran, dan pembukuan berjalan sendiri-sendiri, datanya disalin manual.",
+      solution: "Satu sistem yang menyambungkan QRIS, payment gateway, notifikasi WhatsApp, printer, dan pembukuan.",
+      example: { label: "Sissi Booth, pembayaran QRIS yang terdeteksi lunas sendiri", href: "https://booth.sissi.id/" },
     },
     {
-      title: "IoT & perangkat",
-      body: "Sensor, kendali perangkat, mesin kiosk, dan pemantauan jarak jauh. Dari prototipe sampai terpasang di lokasi.",
-      tags: ["Sensor", "Kiosk", "Monitoring"],
+      name: "IoT & perangkat",
+      problem: "Mesin, ruangan, atau alat masih harus dicek orang secara langsung.",
+      solution: "Sensor, kendali perangkat, dan dashboard yang memberi tahu saat ada yang tidak beres. Dari prototipe sampai terpasang.",
+      example: { label: "Sissi Booth, aplikasi yang mengendalikan kamera dan printer foto", href: "https://booth.sissi.id/" },
     },
     {
-      title: "Desain UI/UX",
-      body: "Riset singkat, alur, dan desain antarmuka yang siap dikembangkan. Cocok untuk tim yang sudah punya developer.",
-      tags: ["Riset", "Wireframe", "Desain antarmuka"],
+      name: "Desain UI/UX",
+      problem: "Sudah punya developer, tapi aplikasinya membingungkan pengguna.",
+      solution: "Riset singkat, alur, dan desain antarmuka yang siap dikembangkan timmu.",
+      example: null,
     },
     {
-      title: "Perawatan & hosting",
-      body: "Server, domain, backup, pembaruan keamanan, dan perbaikan setelah rilis. Sistemmu tetap sehat setelah serah terima.",
-      tags: ["Server", "Backup", "Pembaruan"],
+      name: "Perawatan & hosting",
+      problem: "Situs atau aplikasi sudah jadi, tapi tidak ada yang mengurus setelahnya.",
+      solution: "Server, domain, backup, pembaruan keamanan, dan perbaikan, seperti server produk kami sendiri.",
+      example: null,
     },
   ],
   bundle: {
-    label: "Paket digitalisasi UMKM",
-    title: "Kasir, photobox, pembukuan, dan website dari satu tim.",
-    body: "Gabungkan Sissi Kasir, Sissi Booth, atau Loka Accounting dengan website usahamu. Satu kontak untuk pemasangan, pelatihan, dan bantuan sesudahnya.",
-    cta: "Tanya paketnya",
+    text: "Usaha kecil dan ingin mulai dari yang sudah jadi? Gabungkan Sissi Kasir, Sissi Booth, atau Loka Accounting dengan website usahamu.",
+    cta: "Tanya paket digitalisasi UMKM",
   },
 } as const;
 
@@ -230,7 +266,7 @@ export const portfolio = {
       domain: "kasir.sissi.id",
       href: "https://kasir.sissi.id/",
       kind: "Produk Sissi",
-      summary: "Aplikasi kasir Android offline-first, server sinkronisasi, dashboard web pemilik, dan pesan mandiri lewat QR meja.",
+      summary: "Situs produk, panduan bergambar, dashboard web pemilik, dan pesan mandiri lewat QR meja. Aplikasinya sendiri berjalan offline di Android.",
       image: "/products/site-kasir.jpg",
       featured: false,
     },
@@ -239,17 +275,8 @@ export const portfolio = {
       domain: "booth.sissi.id",
       href: "https://booth.sissi.id/",
       kind: "Produk Sissi",
-      summary: "Aplikasi photobox dengan QRIS otomatis, galeri foto lewat QR, dan dashboard pemilik booth.",
+      summary: "Situs produk, galeri foto tamu lewat QR, dan dashboard pemilik booth.",
       image: "/products/site-booth.jpg",
-      featured: false,
-    },
-    {
-      name: "Loka Accounting",
-      domain: "lokatech.id",
-      href: "https://lokatech.id/",
-      kind: "Produk Sissi",
-      summary: "Software akuntansi online: penjualan, pembelian, kas, persediaan, aset, dan laporan keuangan.",
-      image: "/products/site-lokatech.jpg",
       featured: false,
     },
   ],

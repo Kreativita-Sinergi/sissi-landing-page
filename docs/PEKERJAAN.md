@@ -3,7 +3,7 @@
 > **Dokumen hidup.** Agent/kontributor WAJIB membacanya di awal sesi dan memperbaruinya di akhir sesi.
 > Hanya lokal di repo ini.
 
-Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (situs perusahaan versi pertama)
+Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (redesain hero & layanan)
 
 ## Menunggu reviu sebelum merge
 
@@ -40,6 +40,13 @@ _(kosong)_
 
 ## Selesai (terbaru di atas)
 
+- **2026-10-14 · Redesain hero & layanan (M; Claude Opus 5.5; pemilik memilih opsi)** — Masukan pemilik: hero
+  terasa seperti situs aplikasi kasir dan bagian layanan terasa "AI slop". Hero → opsi B "pernyataan + deret karya":
+  judul "Software house dari Pekanbaru." + 4 kartu sejajar (Kasir, Booth, Loka, pilihfotomu sebagai proyek klien).
+  Layanan → daftar "masalahnya → yang kami buat → contoh" (tanpa grid kartu, nomor, pil, dan spanduk oranye) dan
+  dipindah tepat di bawah hero. Pola template lain dikurangi: label bergaris mono di tiap section, strip "sedang
+  berjalan", daftar centang di Produk, kotak bernomor di Cara kerja (kini garis waktu). Portofolio: pilihfotomu +
+  situs kasir.sissi.id & booth.sissi.id (Loka tidak diulang). Gambar OG mengikuti judul baru.
 - **2026-10-14 · Situs perusahaan versi pertama (L; Claude Opus 5.5; disetujui pemilik)** — Next.js 16 + Tailwind 4
   + TS, satu halaman statis: Hero (layar asli Sissi Kasir), Produk (Kasir, Booth, Loka — fakta dari situs masing-
   masing), Layanan (6 + paket digitalisasi UMKM), Cara kerja (5 langkah), Portofolio (pilihfotomu = proyek klien,

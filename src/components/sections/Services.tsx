@@ -1,6 +1,5 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { services } from "@/constants/content";
-import { ButtonLink } from "@/components/shared/ButtonLink";
 import { Container } from "@/components/shared/Container";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 
@@ -10,36 +9,50 @@ export function Services() {
       <Container>
         <SectionHeader dark eyebrow={services.eyebrow} title={services.title} body={services.body} />
 
-        <ol className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
-          {services.items.map((s, i) => (
-            <li key={s.title} className="bg-ink p-7">
-              <p className="font-mono text-xs text-brand">{String(i + 1).padStart(2, "0")}</p>
-              <h3 className="mt-3 text-xl font-bold tracking-[-0.015em]">{s.title}</h3>
-              <p className="mt-3 text-[15px] leading-relaxed text-on-dark-muted">{s.body}</p>
-              <ul className="mt-5 flex flex-wrap gap-2">
-                {s.tags.map((t) => (
-                  <li key={t} className="rounded-full border border-white/15 px-2.5 py-1 text-xs text-on-dark-muted">
-                    {t}
-                  </li>
-                ))}
-              </ul>
+        <div className="mt-14 hidden grid-cols-[minmax(0,15rem)_1fr_1.15fr] gap-10 pb-3 text-xs font-semibold text-on-dark-muted lg:grid">
+          <span />
+          <span>{services.problemLabel}</span>
+          <span>{services.solutionLabel}</span>
+        </div>
+
+        <ul className="mt-10 border-t border-white/15 lg:mt-0">
+          {services.items.map((s) => (
+            <li
+              key={s.name}
+              className="grid gap-3 border-b border-white/15 py-8 lg:grid-cols-[minmax(0,15rem)_1fr_1.15fr] lg:gap-10"
+            >
+              <h3 className="text-xl font-bold tracking-[-0.02em] sm:text-2xl">{s.name}</h3>
+              <p className="text-[17px] leading-relaxed text-on-dark-muted">{s.problem}</p>
+              <div>
+                <p className="flex gap-2.5 text-[17px] leading-relaxed">
+                  <ArrowRight aria-hidden className="mt-1.5 size-4 shrink-0 text-brand" />
+                  {s.solution}
+                </p>
+                {s.example ? (
+                  <a
+                    href={s.example.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 ml-6.5 block text-sm leading-relaxed text-on-dark-muted transition-colors hover:text-brand"
+                  >
+                    <span className="font-semibold text-on-dark">{services.exampleLabel}:</span> {s.example.label}
+                    <ArrowUpRight className="ml-1 inline size-3.5 align-[-2px]" />
+                  </a>
+                ) : null}
+              </div>
             </li>
           ))}
-        </ol>
+        </ul>
 
-        <div className="mt-14 grid gap-6 rounded-2xl bg-brand p-7 text-ink sm:p-10 lg:grid-cols-[1fr_auto] lg:items-end">
-          <div className="max-w-2xl">
-            <p className="font-mono text-xs font-medium tracking-[0.14em] uppercase">{services.bundle.label}</p>
-            <h3 className="mt-3 text-2xl leading-tight font-bold tracking-[-0.02em] text-balance sm:text-3xl">
-              {services.bundle.title}
-            </h3>
-            <p className="mt-3 leading-relaxed text-ink/80">{services.bundle.body}</p>
-          </div>
-          <ButtonLink href="#kontak" variant="dark" className="self-start lg:self-end">
-            {services.bundle.cta}
-            <ArrowRight className="size-4" />
-          </ButtonLink>
-        </div>
+        <p className="mt-10 max-w-3xl leading-relaxed text-on-dark-muted">
+          {services.bundle.text}{" "}
+          <a
+            href="#kontak"
+            className="font-semibold whitespace-nowrap text-brand underline decoration-brand/40 decoration-2 underline-offset-4 hover:decoration-brand"
+          >
+            {services.bundle.cta} →
+          </a>
+        </p>
       </Container>
     </section>
   );
