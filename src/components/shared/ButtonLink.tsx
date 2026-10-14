@@ -3,7 +3,7 @@ import { cn } from "./cn";
 type Variant = "primary" | "dark" | "outline" | "outline-dark";
 
 const variants: Record<Variant, string> = {
-  primary: "bg-brand text-ink hover:bg-brand-hover active:bg-brand-press",
+  primary: "bg-brand text-on-brand hover:bg-brand-press active:bg-brand-deep",
   dark: "bg-ink text-on-dark hover:bg-charcoal",
   outline: "border border-line-strong bg-surface text-ink hover:border-ink",
   "outline-dark": "border border-white/20 text-on-dark hover:border-white/60",

@@ -38,7 +38,7 @@ export const nav = {
 
 export const hero = {
   eyebrow: `${site.company} · ${site.city}`,
-  title: "Software house dari Pekanbaru.",
+  title: "Kami membuat software untuk usaha Indonesia.",
   lead: "Produk kami dipakai usaha setiap hari, dan kami bisa membuatkan punyamu: website, aplikasi, sistem, sampai IoT.",
   primary: { label: "Konsultasi gratis", href: "#kontak" },
   secondary: { label: "Lihat layanan", href: "#layanan" },

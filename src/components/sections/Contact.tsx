@@ -217,7 +217,7 @@ export function Contact() {
           <div className="flex flex-col gap-3 sm:flex-row">
             <button
               type="submit"
-              className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-full bg-brand px-6 font-semibold text-ink transition-colors hover:bg-brand-hover active:bg-brand-press"
+              className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-full bg-brand px-6 font-semibold text-on-brand transition-colors hover:bg-brand-press active:bg-brand-deep"
             >
               <MessageCircle className="size-4" />
               {f.sendWhatsapp}

@@ -3,7 +3,7 @@
 > **Dokumen hidup.** Agent/kontributor WAJIB membacanya di awal sesi dan memperbaruinya di akhir sesi.
 > Hanya lokal di repo ini.
 
-Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (redesain hero & layanan)
+Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (judul hero & teks tombol putih)
 
 ## Menunggu reviu sebelum merge
 
@@ -40,6 +40,10 @@ _(kosong)_
 
 ## Selesai (terbaru di atas)
 
+- **2026-10-14 · Judul hero & tombol oranye (XS; Claude Opus 5.5; diminta pemilik)** — judul "Software house dari
+  Pekanbaru." → "Kami membuat software untuk usaha Indonesia." (gambar OG ikut). Teks tombol oranye → putih
+  (token `on-brand`; hover/tekan ke oranye lebih gelap). Catatan: kontras putih di atas `#F1702C` = 2,96:1, di
+  bawah batas WCAG AA (4,5:1) — pemilik memilih putih; alternatif bila perlu: oranye tombol `#C95215` (4,47:1).
 - **2026-10-14 · Redesain hero & layanan (M; Claude Opus 5.5; pemilik memilih opsi)** — Masukan pemilik: hero
   terasa seperti situs aplikasi kasir dan bagian layanan terasa "AI slop". Hero → opsi B "pernyataan + deret karya":
   judul "Software house dari Pekanbaru." + 4 kartu sejajar (Kasir, Booth, Loka, pilihfotomu sebagai proyek klien).

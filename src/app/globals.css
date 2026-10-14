@@ -3,8 +3,8 @@
 /* Token desain sissi.id. Warna merek dari logo (assets/sissi-logo.svg): oranye #F1702C, arang #292E31. */
 @theme {
   --color-brand: #f1702c;
-  --color-brand-hover: #f5844a;
   --color-brand-press: #e3631f;
+  --color-on-brand: #ffffff;
   --color-brand-deep: #b84a12; /* teks oranye di atas latar terang (kontras AA) */
   --color-brand-soft: #fdeee5;
   --color-ink: #1f2326;
