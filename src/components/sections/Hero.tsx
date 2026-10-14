@@ -37,7 +37,7 @@ export function Hero({ t }: { t: Dictionary["hero"] }) {
 
         {/* Gaya kolase: orang tanpa latar, potongan UI asli di belakang & di depan, label produk. */}
         <div className="relative mx-auto aspect-[1/1.05] w-full max-w-[380px] animate-rise [animation-delay:150ms] sm:max-w-[480px] lg:mr-0">
-          <div aria-hidden className="absolute inset-x-[2%] top-[30%] bottom-[2%] rounded-[40px] bg-panel" />
+          <Backdrop />
 
           {/* Di belakang orang */}
           <UiCard img={t.ui.chart} className="top-[22%] -left-[3%] w-[52%]" />
@@ -123,5 +123,40 @@ function UiCard({ img, className, sizes = "260px" }: { img: UiImg; className: st
     >
       <Image src={img.src} alt={img.alt} width={img.width} height={img.height} sizes={sizes} className="block h-auto w-full" />
     </div>
+  );
+}
+
+/**
+ * Panel di belakang orang: sisi kiri miring + sudut membulat, gradasi abu hangat (gaya contoh pemilik).
+ * viewBox ≈ rasio kotak panel sehingga sudut tidak tertarik.
+ */
+function Backdrop() {
+  return (
+    <svg
+      aria-hidden
+      viewBox="0 0 480 340"
+      preserveAspectRatio="none"
+      className="absolute top-[28%] right-[1%] bottom-[2%] left-[-2%] h-[70%] w-[101%]"
+    >
+      <defs>
+        <linearGradient id="hero-panel" x1="1" y1="0" x2="0.15" y2="1">
+          <stop offset="0" style={{ stopColor: "var(--color-panel-deep)" }} />
+          <stop offset="0.55" style={{ stopColor: "var(--color-panel)" }} />
+          <stop offset="1" style={{ stopColor: "var(--color-panel-light)" }} />
+        </linearGradient>
+        <radialGradient id="hero-glow" cx="0.62" cy="0.18" r="0.55">
+          <stop offset="0" style={{ stopColor: "var(--color-brand)", stopOpacity: 0.16 }} />
+          <stop offset="1" style={{ stopColor: "var(--color-brand)", stopOpacity: 0 }} />
+        </radialGradient>
+      </defs>
+      <path
+        d="M152 0 H440 Q480 0 480 40 V300 Q480 340 440 340 H44 Q0 340 13 302 L103 38 Q116 0 152 0 Z"
+        fill="url(#hero-panel)"
+      />
+      <path
+        d="M152 0 H440 Q480 0 480 40 V300 Q480 340 440 340 H44 Q0 340 13 302 L103 38 Q116 0 152 0 Z"
+        fill="url(#hero-glow)"
+      />
+    </svg>
   );
 }

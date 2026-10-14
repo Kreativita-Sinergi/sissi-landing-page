@@ -12,7 +12,6 @@
   --color-paper: #fbfaf8;
   --color-surface: #ffffff;
   --color-sand: #f3f0eb;
-  --color-panel: #e8e6e2;
   --color-line: #e6e2dc;
   --color-line-strong: #d3cec6;
   --color-muted: #5b6064;
@@ -31,6 +30,13 @@
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 
   --animate-rise: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+/* Gradasi panel hero (dipakai lewat var() di SVG, bukan kelas) → static agar selalu ditulis ke CSS. */
+@theme static {
+  --color-panel: #e4e0da;
+  --color-panel-deep: #c3bbb0;
+  --color-panel-light: #f1eee9;
 }
 
 @keyframes rise {

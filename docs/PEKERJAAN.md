@@ -3,7 +3,7 @@
 > **Dokumen hidup.** Agent/kontributor WAJIB membacanya di awal sesi dan memperbaruinya di akhir sesi.
 > Hanya lokal di repo ini.
 
-Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (jarak kolom hero lebih lebar)
+Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (panel hero miring + gradasi)
 
 ## Menunggu reviu sebelum merge
 
@@ -50,6 +50,10 @@ _(kosong)_
 
 ## Selesai (terbaru di atas)
 
+- **2026-10-14 · Panel hero miring + gradasi (S; Claude Opus 5.5; masukan pemilik)** — kotak abu datar diganti SVG
+  `Backdrop` di `Hero.tsx`: sisi kiri miring, sudut membulat, gradasi abu hangat (`--color-panel-deep/-/-light`) +
+  sinar oranye tipis. Pelajaran: Tailwind 4 hanya menulis variabel tema yang dipakai kelas → warna yang hanya dipakai
+  lewat `var()` di SVG harus di `@theme static`; `stopColor` dengan `var()` harus lewat `style`, bukan atribut.
 - **2026-10-14 · Judul hero dua baris + jarak kolom (XS; Claude Opus 5.5; masukan pemilik)** — kolom teks hero
   dilebarkan (`1.45fr_1fr`), jarak kolom `gap-16`/`xl:gap-20`, kolase maks 480 px, dan ukuran judul disesuaikan (HP 1,8rem → desktop 3,1rem). Diukur dengan Playwright: 2 baris di
   360–1440 px untuk ID dan EN (EN 1 baris di 768 px).
