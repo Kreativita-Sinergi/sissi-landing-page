@@ -36,7 +36,7 @@ _(kosong)_
   Ganti dengan foto anggota tim asli bila ada: latar polos, setengah badan; potong dengan Vision macOS seperti catatan
   2026-10-14, simpan WebP transparan ±800 px lebar.
 - [ ] **P2 · Tangkapan layar aplikasi Loka Accounting** — produk Loka kini memakai panel tipografi (belum ada
-  tangkapan layar aplikasi di Dev/Sissi). Ganti dengan layar asli bila tersedia (`src/constants/content.ts` →
+  tangkapan layar aplikasi di Dev/Sissi). Ganti dengan layar asli bila tersedia (`src/content/id.ts` & `en.ts` →
   `products.items[loka].visual`).
 - [ ] **P3 · Tangkapan layar portofolio diperbarui** — `public/products/site-*.jpg` diambil 2026-10-14 dari situs
   langsung (Chrome headless 1440×900). Ambil ulang bila situsnya berubah besar.
