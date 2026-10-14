@@ -3,7 +3,7 @@
 > **Dokumen hidup.** Agent/kontributor WAJIB membacanya di awal sesi dan memperbaruinya di akhir sesi.
 > Hanya lokal di repo ini.
 
-Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (hero: foto + simbol S, judul lebih kecil)
+Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (hero: latar foto jadi lingkaran polos)
 
 ## Menunggu reviu sebelum merge
 
@@ -43,6 +43,8 @@ _(kosong)_
 
 ## Selesai (terbaru di atas)
 
+- **2026-10-14 · Latar foto hero (XS; Claude Opus 5.5; masukan pemilik)** — simbol S yang diperbesar di belakang foto
+  terlihat berantakan (tepi jiplakan bergelombang). Diganti satu lingkaran oranye polos di kanan atas foto.
 - **2026-10-14 · Hero: foto + simbol S (S; Claude Opus 5.5; masukan pemilik)** — pemilik tidak mau kartu karya
   maupun tangkapan layar aplikasi di kanan hero; contoh yang disukai: gamatechno.com (foto orang + bentuk merek, tanpa
   slider). Kanan hero kini foto orang (Unsplash, gratis komersial) di atas simbol S logo yang diperbesar, plus 2 label

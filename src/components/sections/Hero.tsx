@@ -34,16 +34,9 @@ export function Hero() {
           <p className="mt-3 text-sm text-faint">{hero.note}</p>
         </div>
 
-        {/* Foto + bentuk dari simbol logo S di belakangnya. */}
+        {/* Foto + satu lingkaran oranye polos di belakangnya. */}
         <div className="relative mx-auto w-full max-w-[340px] animate-rise sm:max-w-[400px] [animation-delay:150ms] lg:mr-0">
-          <Image
-            src="/brand/sissi-mark.svg"
-            alt=""
-            aria-hidden
-            width={32}
-            height={32}
-            className="absolute top-1/2 left-1/2 w-[128%] max-w-none -translate-x-1/2 -translate-y-1/2"
-          />
+          <div aria-hidden className="absolute -top-8 -right-10 aspect-square w-[78%] rounded-full bg-brand sm:-right-14" />
           <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] bg-sand shadow-[0_30px_60px_-30px_rgba(31,35,38,0.5)]">
             <Image
               src={hero.photo.src}

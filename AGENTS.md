@@ -22,7 +22,7 @@ FAQ, dan formulir permintaan proyek. Bahasa kerja & teks: **Bahasa Indonesia**.
 6. **Token desain di `src/app/globals.css` (`@theme`)** — jangan hex mentah di komponen. Warna di `src/lib/og.ts`
    harus sama dengan `@theme`.
 7. **Anti "AI slop":** tanpa gradien ungu, ikon dalam lingkaran berderet, kartu kaca, statistik karangan, atau
-   UI tiruan. Visual produk = tangkapan layar asli (`public/products/`). Hero = foto orang + simbol S logo
+   UI tiruan. Visual produk = tangkapan layar asli (`public/products/`). Hero = foto orang + lingkaran oranye polos
    (`public/hero/`, pemilik tidak mau tangkapan layar aplikasi di kanan hero). Oranye merek hanya aksen.
 8. **Dialog/dropdown/menu bukan bawaan sistem** (pilihan di formulir = chip). Catatan/artefak proyek **hanya lokal**.
 9. **Halaman statis:** `cacheComponents` aktif → jangan `new Date()`/data dinamis saat prerender (tahun di
