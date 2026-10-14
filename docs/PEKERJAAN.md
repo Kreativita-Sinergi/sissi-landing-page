@@ -17,9 +17,9 @@ _(kosong)_
 
 ## Berikutnya (urut prioritas)
 
-1. **P1 · Rilis** — buat repo GitHub (nama `sissi-landing-page`; nama ini sebelumnya redirect ke
-   `sissi-pos-landing-page`, pemilik sudah setuju redirect itu hilang), hubungkan ke Vercel, arahkan domain
-   `sissi.id` (DNS di DomaiNesia). Isi `NEXT_PUBLIC_SITE_URL` bila domain berbeda.
+1. **P1 · Rilis** — repo GitHub sudah ada & ter-push (2026-10-14:
+   https://github.com/Kreativita-Sinergi/sissi-landing-page, cabang `main`). Sisa: hubungkan ke Vercel, arahkan
+   domain `sissi.id` (DNS di DomaiNesia). Isi `NEXT_PUBLIC_SITE_URL` bila domain berbeda.
 2. **P2 · Tinjau isi oleh pemilik** — terutama: FAQ (kepemilikan kode/data, perawatan), rentang anggaran di
    formulir, klaim "melayani klien di luar Pekanbaru", dan teks Tentang kami.
 
