@@ -280,7 +280,7 @@ export const id = {
         kind: "Proyek klien",
         client: true,
         summary:
-          "Situs rumah produksi video dan foto di Pekanbaru dan Jakarta: showreel, portofolio acara, layanan, dan alur kerja, dengan isi yang dikelola lewat CMS.",
+          "Situs rumah produksi video dan foto di Pekanbaru dan Jabodetabek: showreel, portofolio acara, layanan, dan alur kerja, dengan isi yang dikelola lewat CMS.",
         image: "/products/site-madeart.jpg",
         featured: false,
       },

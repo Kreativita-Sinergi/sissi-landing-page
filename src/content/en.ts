@@ -190,7 +190,7 @@ export const en: Dictionary = {
         ...id.portfolio.items[1],
         kind: "Client project",
         summary:
-          "Website for a video and photo production house in Pekanbaru and Jakarta: showreel, event portfolio, services, and process, with content managed through a CMS.",
+          "Website for a video and photo production house in Pekanbaru and Greater Jakarta: showreel, event portfolio, services, and process, with content managed through a CMS.",
       },
       {
         ...id.portfolio.items[2],

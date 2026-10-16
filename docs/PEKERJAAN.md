@@ -35,7 +35,7 @@ _(kosong)_
 - [ ] **P3 · Foto hero asli** — idealnya foto anggota tim sungguhan.
   Ganti dengan foto anggota tim asli bila ada: latar polos, setengah badan; potong dengan Vision macOS seperti catatan
   2026-10-14, simpan WebP transparan ±800 px lebar.
-- [ ] **P3 · Tangkapan layar portofolio diperbarui** — `public/products/site-*.jpg` diambil 2026-10-14 (madeart: 2026-10-16) dari situs
+- [ ] **P3 · Tangkapan layar portofolio diperbarui** — `public/products/site-*.jpg` diambil 2026-10-14 (madeart: 2026-10-17) dari situs
   langsung (Chrome headless 1440×900). Ambil ulang bila situsnya berubah besar.
 - [ ] **P3 · Nama PT** — situs memakai "PT. Sissi Kreatif Teknologi" atas permintaan pemilik walau akta belum
   terbit (2026-10-14). Bila nama/badan hukum berubah, cukup ubah `site.company`.
@@ -47,6 +47,10 @@ _(kosong)_
 
 ## Selesai (terbaru di atas)
 
+- **2026-10-17 · Portofolio Made Art diperbarui (XS; Claude Opus 5.5; permintaan pemilik)** — tangkapan layar
+  `site-madeart.jpg` diambil ulang setelah situs klien ganti foto & copy hero. Situs kini punya preloader, jadi
+  `chrome --screenshot` biasa hanya menangkap logo; dipakai Chrome headless lewat CDP (1440×900, tunggu ±12 dtk).
+  Ringkasan kartu: "Jakarta" → "Jabodetabek" / "Greater Jakarta" mengikuti situsnya.
 - **2026-10-16 · Navigasi anchor lebih halus (XS; Claude Opus 5.5; permintaan pemilik)** — `html` kini
   `scroll-behavior: smooth` (sebelumnya hanya atribut `data-scroll-behavior` tanpa CSS-nya, jadi #produk dkk.
   meloncat; tetap mati bila `prefers-reduced-motion`). Menu seluler dibuat melayang (`absolute top-full`) agar

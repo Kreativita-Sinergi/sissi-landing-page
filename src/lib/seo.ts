@@ -8,7 +8,7 @@ import { getDictionary, homePath, locales, ogLocale, site, type Locale } from "@
 export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://sissi.id").replace(/\/+$/, "");
 
 /** Tanggal terakhir isi diperbarui (sitemap). Ubah saat teks berubah. */
-export const contentUpdated = "2026-10-16";
+export const contentUpdated = "2026-10-17";
 
 /** Peta hreflang → alamat; x-default = bahasa bawaan. */
 export const languageAlternates = {
