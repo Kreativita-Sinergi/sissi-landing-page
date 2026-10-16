@@ -13,6 +13,7 @@ import { cn } from "@/components/shared/cn";
 export function Navbar({ t, locale }: { t: Dictionary["nav"]; locale: Locale }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -20,6 +21,26 @@ export function Navbar({ t, locale }: { t: Dictionary["nav"]; locale: Locale }) 
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Tandai tautan section yang sedang terlihat (pita tipis di sepertiga atas layar).
+  useEffect(() => {
+    const sections = t.links
+      .map((l) => document.getElementById(l.href.slice(1)))
+      .filter((el): el is HTMLElement => el !== null);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) if (e.isIntersecting) setActive(`#${e.target.id}`);
+      },
+      { rootMargin: "-30% 0px -65% 0px" },
+    );
+    sections.forEach((el) => observer.observe(el));
+    const onTop = () => window.scrollY < 200 && setActive(null);
+    window.addEventListener("scroll", onTop, { passive: true });
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", onTop);
+    };
+  }, [t.links]);
 
   useEffect(() => {
     if (!open) return;
@@ -42,7 +63,15 @@ export function Navbar({ t, locale }: { t: Dictionary["nav"]; locale: Locale }) 
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Utama">
           {t.links.map((l) => (
-            <a key={l.href} href={l.href} className="text-[15px] font-medium text-muted transition-colors hover:text-ink">
+            <a
+              key={l.href}
+              href={l.href}
+              aria-current={active === l.href ? "location" : undefined}
+              className={cn(
+                "text-[15px] font-medium transition-colors hover:text-ink",
+                active === l.href ? "text-ink" : "text-muted",
+              )}
+            >
               {l.label}
             </a>
           ))}
@@ -66,14 +95,22 @@ export function Navbar({ t, locale }: { t: Dictionary["nav"]; locale: Locale }) 
         </div>
       </Container>
 
-      <div id="menu-seluler" hidden={!open} className="border-t border-line bg-paper md:hidden">
+      <div
+        id="menu-seluler"
+        hidden={!open}
+        className="absolute inset-x-0 top-full border-y border-line bg-paper shadow-lg md:hidden"
+      >
         <Container className="flex flex-col py-3">
           {t.links.map((l) => (
             <a
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="border-b border-line py-3.5 text-base font-medium text-ink last:border-b-0"
+              aria-current={active === l.href ? "location" : undefined}
+              className={cn(
+                "border-b border-line py-3.5 text-base font-medium last:border-b-0",
+                active === l.href ? "text-brand-deep" : "text-ink",
+              )}
             >
               {l.label}
             </a>

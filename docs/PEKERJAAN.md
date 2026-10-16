@@ -3,7 +3,7 @@
 > **Dokumen hidup.** Agent/kontributor WAJIB membacanya di awal sesi dan memperbaruinya di akhir sesi.
 > Hanya lokal di repo ini.
 
-Terakhir diperbarui: **2026-10-16** · oleh: Claude Opus 5.5 (portofolio Made Art)
+Terakhir diperbarui: **2026-10-16** · oleh: Claude Opus 5.5 (navigasi anchor halus)
 
 ## Menunggu reviu sebelum merge
 
@@ -47,6 +47,11 @@ _(kosong)_
 
 ## Selesai (terbaru di atas)
 
+- **2026-10-16 · Navigasi anchor lebih halus (XS; Claude Opus 5.5; permintaan pemilik)** — `html` kini
+  `scroll-behavior: smooth` (sebelumnya hanya atribut `data-scroll-behavior` tanpa CSS-nya, jadi #produk dkk.
+  meloncat; tetap mati bila `prefers-reduced-motion`). Menu seluler dibuat melayang (`absolute top-full`) agar
+  penutupannya tidak menggeser isi halaman di tengah scroll (dulu tujuan meleset ±tinggi menu). Navbar menandai
+  section aktif (IntersectionObserver, `aria-current="location"`).
 - **2026-10-16 · Portofolio: Made Art (XS; Claude Opus 5.5; permintaan pemilik)** — https://madeart.id/ ditambahkan
   sebagai "Proyek klien" (ID & EN) dengan tangkapan layar `public/products/site-madeart.jpg` (Chrome headless
   1440×900). Kartu non-unggulan kini 3 kolom di layar `lg` agar tidak ada kartu yatim. Catatan: situs Made Art
