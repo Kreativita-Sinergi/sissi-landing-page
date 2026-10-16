@@ -274,6 +274,17 @@ export const id = {
         featured: true,
       },
       {
+        name: "Made Art",
+        domain: "madeart.id",
+        href: "https://madeart.id/",
+        kind: "Proyek klien",
+        client: true,
+        summary:
+          "Situs rumah produksi video dan foto di Pekanbaru dan Jakarta: showreel, portofolio acara, layanan, dan alur kerja, dengan isi yang dikelola lewat CMS.",
+        image: "/products/site-madeart.jpg",
+        featured: false,
+      },
+      {
         name: "Sissi Kasir",
         domain: "kasir.sissi.id",
         href: "https://kasir.sissi.id/",

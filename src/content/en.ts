@@ -188,12 +188,18 @@ export const en: Dictionary = {
       },
       {
         ...id.portfolio.items[1],
+        kind: "Client project",
+        summary:
+          "Website for a video and photo production house in Pekanbaru and Jakarta: showreel, event portfolio, services, and process, with content managed through a CMS.",
+      },
+      {
+        ...id.portfolio.items[2],
         kind: "Sissi product",
         summary:
           "Product site, illustrated guides, an owner dashboard, and self-ordering via table QR codes. The app itself runs offline on Android.",
       },
       {
-        ...id.portfolio.items[2],
+        ...id.portfolio.items[3],
         kind: "Sissi product",
         summary: "Product site, guest photo galleries via QR, and a dashboard for booth owners.",
       },

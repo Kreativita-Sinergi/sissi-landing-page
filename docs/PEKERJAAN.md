@@ -3,7 +3,7 @@
 > **Dokumen hidup.** Agent/kontributor WAJIB membacanya di awal sesi dan memperbaruinya di akhir sesi.
 > Hanya lokal di repo ini.
 
-Terakhir diperbarui: **2026-10-14** · oleh: Claude Opus 5.5 (Loka Accounting → Sissi Accounting)
+Terakhir diperbarui: **2026-10-16** · oleh: Claude Opus 5.5 (portofolio Made Art)
 
 ## Menunggu reviu sebelum merge
 
@@ -35,7 +35,7 @@ _(kosong)_
 - [ ] **P3 · Foto hero asli** — idealnya foto anggota tim sungguhan.
   Ganti dengan foto anggota tim asli bila ada: latar polos, setengah badan; potong dengan Vision macOS seperti catatan
   2026-10-14, simpan WebP transparan ±800 px lebar.
-- [ ] **P3 · Tangkapan layar portofolio diperbarui** — `public/products/site-*.jpg` diambil 2026-10-14 dari situs
+- [ ] **P3 · Tangkapan layar portofolio diperbarui** — `public/products/site-*.jpg` diambil 2026-10-14 (madeart: 2026-10-16) dari situs
   langsung (Chrome headless 1440×900). Ambil ulang bila situsnya berubah besar.
 - [ ] **P3 · Nama PT** — situs memakai "PT. Sissi Kreatif Teknologi" atas permintaan pemilik walau akta belum
   terbit (2026-10-14). Bila nama/badan hukum berubah, cukup ubah `site.company`.
@@ -47,6 +47,10 @@ _(kosong)_
 
 ## Selesai (terbaru di atas)
 
+- **2026-10-16 · Portofolio: Made Art (XS; Claude Opus 5.5; permintaan pemilik)** — https://madeart.id/ ditambahkan
+  sebagai "Proyek klien" (ID & EN) dengan tangkapan layar `public/products/site-madeart.jpg` (Chrome headless
+  1440×900). Kartu non-unggulan kini 3 kolom di layar `lg` agar tidak ada kartu yatim. Catatan: situs Made Art
+  masih memuat testimoni placeholder ("Nama Narasumber") — sampaikan ke klien sebelum dipamerkan lebih luas.
 - **2026-10-14 · Loka Accounting → Sissi Accounting (S; Claude Opus 5.5; permintaan pemilik)** — produk kini
   "Sissi Accounting" di https://accounting.sissi.id/ (ID & EN, footer, deret karya, meta). Isi dari situs produk:
   tagline "Pembukuan rapi. Usaha lebih terarah.", fitur (penjualan/pembelian, kas & bank + rekonsiliasi,
