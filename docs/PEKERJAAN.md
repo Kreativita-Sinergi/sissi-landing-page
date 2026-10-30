@@ -9,7 +9,7 @@ Terakhir diperbarui: **2026-10-16** · oleh: Claude Opus 5.5 (navigasi anchor ha
 
 | Cabang | Ringkasan | Cara verifikasi | Risiko / catatan | Dibuat |
 |---|---|---|---|---|
-| `claude/next-16.4.3` | Next.js 16.4.0 → 16.4.3 (advisori keamanan) + `eslint-config-next` 16.4.3; `experimental.agentUpgrade: "security"` | `npx next --version`, `env -u NODE_ENV scripts/exclusive.sh npm run build`, lint | Build gagal (`/_global-error`, `useContext` null) bila shell punya `NODE_ENV=development` — bukan akibat upgrade | 2026-10-30 |
+| _(kosong)_ | | | | |
 
 ## Sedang dikerjakan
 
@@ -47,6 +47,10 @@ _(kosong)_
 
 ## Selesai (terbaru di atas)
 
+- **2026-10-30 · Next.js 16.4.0 → 16.4.3 (S; Claude Opus 5.5; advisori keamanan)** — `next` & `eslint-config-next`
+  tepat 16.4.3, `experimental.agentUpgrade: "security"`. Lint, build, dan `next start` lolos. Build gagal di
+  `/_global-error` ("reading 'useContext'") bila shell punya `NODE_ENV=development` — jalankan dengan
+  `env -u NODE_ENV`.
 - **2026-10-17 · Portofolio Made Art diperbarui (XS; Claude Opus 5.5; permintaan pemilik)** — tangkapan layar
   `site-madeart.jpg` diambil ulang setelah situs klien ganti foto & copy hero. Situs kini punya preloader, jadi
   `chrome --screenshot` biasa hanya menangkap logo; dipakai Chrome headless lewat CDP (1440×900, tunggu ±12 dtk).
