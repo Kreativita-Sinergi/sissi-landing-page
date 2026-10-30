@@ -3,7 +3,7 @@
 > **Baca seluruh berkas ini SEBELUM mengubah kode.** Aturan kerja umum (git, estimasi, catatan, sumber daya)
 > sama dengan semua proyek pemilik: `../pos/sissi-pos-app/docs/aturan-lengkap.md`. Jangan mengubah `../pos/`.
 
-Situs perusahaan **PT. Sissi Kreatif Teknologi** (sissi.id): profil, produk (Sissi Kasir, Sissi Booth, Sissi
+Situs perusahaan **Sissi Kreatif Teknologi** (sissi.id): profil, produk (Sissi Kasir, Sissi Booth, Sissi
 Accounting), layanan (website, aplikasi, sistem custom, IoT, UI/UX, perawatan), cara kerja, portofolio, tentang,
 FAQ, dan formulir permintaan proyek. Bahasa kerja & teks: **Bahasa Indonesia**.
 
@@ -17,7 +17,7 @@ FAQ, dan formulir permintaan proyek. Bahasa kerja & teks: **Bahasa Indonesia**.
 4. **Perintah berat lewat `scripts/exclusive.sh`** (build, lint penuh). Server dev di **port 3100** (8080 milik
    sissi-pos-service); hentikan setelah dipakai.
 5. **Dua bahasa: Indonesia (`/`, bawaan) & Inggris (`/en`).** Semua teks di kamus `src/content/id.ts` dan
-   `src/content/en.ts` (bentuk wajib sama — TypeScript menolak bila beda); data bersama (kontak, nama PT) di
+   `src/content/en.ts` (bentuk wajib sama — TypeScript menolak bila beda); data bersama (kontak, nama usaha) di
    `src/content/site.ts`. Komponen tidak berisi copy dan menerima teks lewat prop `t`. Nama produk & tagline
    produk tetap bahasa Indonesia di semua bahasa (keputusan pemilik). **Jangan menulis harga jasa**:
    keputusan pemilik "gratis konsultasi, harga sesuai kebutuhan". Fakta produk harus sesuai situs produknya

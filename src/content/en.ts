@@ -6,9 +6,9 @@ import type { Dictionary } from "./types";
 
 export const en: Dictionary = {
   meta: {
-    title: "Sissi — Software, apps & IoT for businesses | PT. Sissi Kreatif Teknologi",
+    title: "Sissi — Software, apps & IoT for businesses | Sissi Kreatif Teknologi",
     description:
-      "PT. Sissi Kreatif Teknologi builds Sissi Kasir, Sissi Booth, and Sissi Accounting, and takes on custom websites, apps, business systems, and IoT projects. Free consultation.",
+      "Sissi Kreatif Teknologi builds Sissi Kasir, Sissi Booth, and Sissi Accounting, and takes on custom websites, apps, business systems, and IoT projects. Free consultation.",
     keywords: [
       "software development company Indonesia",
       "web development",
@@ -19,7 +19,7 @@ export const en: Dictionary = {
       "Sissi Booth",
       "Sissi Accounting",
     ],
-    ogAlt: "PT. Sissi Kreatif Teknologi: software, apps, and IoT for businesses",
+    ogAlt: "Sissi Kreatif Teknologi: software, apps, and IoT for businesses",
   },
 
   nav: {

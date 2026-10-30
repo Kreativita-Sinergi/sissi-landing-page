@@ -3,7 +3,7 @@
 > **Dokumen hidup.** Agent/kontributor WAJIB membacanya di awal sesi dan memperbaruinya di akhir sesi.
 > Hanya lokal di repo ini.
 
-Terakhir diperbarui: **2026-10-16** · oleh: Claude Opus 5.5 (navigasi anchor halus)
+Terakhir diperbarui: **2026-10-30** · oleh: Claude Opus 5.5 (hapus "PT.")
 
 ## Menunggu reviu sebelum merge
 
@@ -37,8 +37,6 @@ _(kosong)_
   2026-10-14, simpan WebP transparan ±800 px lebar.
 - [ ] **P3 · Tangkapan layar portofolio diperbarui** — `public/products/site-*.jpg` diambil 2026-10-14 (madeart: 2026-10-17) dari situs
   langsung (Chrome headless 1440×900). Ambil ulang bila situsnya berubah besar.
-- [ ] **P3 · Nama PT** — situs memakai "PT. Sissi Kreatif Teknologi" atas permintaan pemilik walau akta belum
-  terbit (2026-10-14). Bila nama/badan hukum berubah, cukup ubah `site.company`.
 - [ ] **P3 · Analitik** — belum ada (CSP saat ini hanya `'self'`; tambahkan domain analitik ke CSP bila dipasang).
 
 ## Keputusan terbuka (butuh pemilik)
@@ -51,6 +49,10 @@ _(kosong)_
   tepat 16.4.3, `experimental.agentUpgrade: "security"`. Lint, build, dan `next start` lolos. Build gagal di
   `/_global-error` ("reading 'useContext'") bila shell punya `NODE_ENV=development` — jalankan dengan
   `env -u NODE_ENV`.
+- **2026-10-30 · Hapus "PT." dari situs (XS; Claude Opus 5.5; permintaan pemilik)** — pengajuan website atas nama
+  perorangan ditolak bila ada tulisan "PT.", dan badan hukum PT belum ada. `site.company` kini "Sissi Kreatif
+  Teknologi"; judul, deskripsi meta, dan alt OG (ID & EN) ikut diubah. Jangan menulis "PT"/"Perseroan" sampai
+  akta terbit.
 - **2026-10-17 · Portofolio Made Art diperbarui (XS; Claude Opus 5.5; permintaan pemilik)** — tangkapan layar
   `site-madeart.jpg` diambil ulang setelah situs klien ganti foto & copy hero. Situs kini punya preloader, jadi
   `chrome --screenshot` biasa hanya menangkap logo; dipakai Chrome headless lewat CDP (1440×900, tunggu ±12 dtk).

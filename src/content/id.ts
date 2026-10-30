@@ -5,9 +5,9 @@ import type { Product, WorkTone } from "./types";
 
 export const id = {
   meta: {
-    title: "Sissi — Software, aplikasi & IoT untuk usaha | PT. Sissi Kreatif Teknologi",
+    title: "Sissi — Software, aplikasi & IoT untuk usaha | Sissi Kreatif Teknologi",
     description:
-      "PT. Sissi Kreatif Teknologi dari Pekanbaru membuat Sissi Kasir, Sissi Booth, dan Sissi Accounting, serta menerima pembuatan website, aplikasi, sistem custom, dan IoT. Konsultasi gratis.",
+      "Sissi Kreatif Teknologi dari Pekanbaru membuat Sissi Kasir, Sissi Booth, dan Sissi Accounting, serta menerima pembuatan website, aplikasi, sistem custom, dan IoT. Konsultasi gratis.",
     keywords: [
       "jasa pembuatan website",
       "jasa pembuatan aplikasi",
@@ -18,7 +18,7 @@ export const id = {
       "Sissi Booth",
       "Sissi Accounting",
     ],
-    ogAlt: "PT. Sissi Kreatif Teknologi: software, aplikasi, dan IoT untuk usaha",
+    ogAlt: "Sissi Kreatif Teknologi: software, aplikasi, dan IoT untuk usaha",
   },
 
   nav: {

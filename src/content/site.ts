@@ -3,7 +3,7 @@ const phoneE164 = "6285161462806";
 const email = "sissikreatifteknologi@gmail.com";
 
 export const site = {
-  company: "PT. Sissi Kreatif Teknologi",
+  company: "Sissi Kreatif Teknologi",
   brand: "Sissi",
   domain: "sissi.id",
   city: "Pekanbaru",
