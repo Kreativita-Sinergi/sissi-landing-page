@@ -9,7 +9,7 @@ Terakhir diperbarui: **2026-10-16** · oleh: Claude Opus 5.5 (navigasi anchor ha
 
 | Cabang | Ringkasan | Cara verifikasi | Risiko / catatan | Dibuat |
 |---|---|---|---|---|
-| _(kosong)_ | | | | |
+| `claude/next-16.4.3` | Next.js 16.4.0 → 16.4.3 (advisori keamanan) + `eslint-config-next` 16.4.3; `experimental.agentUpgrade: "security"` | `npx next --version`, `env -u NODE_ENV scripts/exclusive.sh npm run build`, lint | Build gagal (`/_global-error`, `useContext` null) bila shell punya `NODE_ENV=development` — bukan akibat upgrade | 2026-10-30 |
 
 ## Sedang dikerjakan
 
