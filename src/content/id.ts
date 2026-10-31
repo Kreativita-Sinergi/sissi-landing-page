@@ -1,7 +1,7 @@
 // Kamus Bahasa Indonesia (bahasa bawaan, di "/"). Bentuknya menjadi acuan bahasa lain.
 // Jangan menulis harga jasa: pemilik memutuskan "gratis konsultasi, harga sesuai kebutuhan".
 import { site } from "./site";
-import type { Product, WorkTone } from "./types";
+import type { LegalSection, Product, WorkTone } from "./types";
 
 export const id = {
   meta: {
@@ -445,5 +445,79 @@ export const id = {
     contactTitle: "Kontak",
     rights: "Hak cipta dilindungi.",
     backToTop: "Kembali ke atas",
+    privacy: { label: "Kebijakan privasi", href: "/privacy" },
+  },
+
+  // Teks legal publik: ubah hanya dengan persetujuan pemilik, lalu perbarui `updated` & `contentUpdated`.
+  privacy: {
+    meta: {
+      title: "Kebijakan privasi | Sissi Kreatif Teknologi",
+      description:
+        "Cara Sissi Kreatif Teknologi mengelola data di situs sissi.id, data klien proyek, dan alat internal Sissi, termasuk integrasi Google Drive.",
+    },
+    back: "Kembali ke beranda",
+    eyebrow: "Privasi",
+    title: "Kebijakan privasi",
+    updated: "Terakhir diperbarui: 1 November 2026",
+    intro:
+      "Kebijakan ini menjelaskan data apa yang kami terima, untuk apa kami memakainya, dan cara menghubungi kami tentang data Anda.",
+    sections: [
+      {
+        title: "Pengelola",
+        body: [
+          `Situs ${site.domain} dikelola oleh ${site.company}, ${site.city}, ${site.region}.`,
+          `Email: ${site.email} · WhatsApp: ${site.phoneDisplay}`,
+        ],
+      },
+      {
+        title: "Situs sissi.id",
+        body: [
+          "Situs ini tidak memiliki akun atau login. Kami tidak memasang analitik, iklan, atau cookie pelacak.",
+          "Formulir permintaan proyek tidak mengirim data ke server kami. Formulir hanya menyusun pesan, lalu Anda sendiri yang mengirimnya lewat WhatsApp atau email. Kami hanya menerima apa yang Anda kirim.",
+          "Penyedia hosting situs (Vercel) dapat memproses log teknis, seperti alamat IP dan informasi peramban, untuk keamanan dan operasional layanan.",
+        ],
+      },
+      {
+        title: "Data klien proyek",
+        body: [
+          "Informasi yang Anda berikan untuk sebuah proyek (kontak, informasi usaha, dan berkas) hanya kami pakai untuk mengerjakan proyek dan berkomunikasi dengan Anda.",
+          "Kami tidak menjual data Anda. Data hanya dibagikan kepada penyedia layanan yang diperlukan untuk menyelesaikan proyek (misalnya hosting) atau bila diwajibkan oleh hukum.",
+          "Data disimpan selama diperlukan untuk proyek serta untuk memenuhi kewajiban hukum dan akuntansi.",
+        ],
+      },
+      {
+        title: "Aplikasi Sissi lainnya",
+        body: [
+          `Sissi Kasir, Sissi Booth, dan Sissi Accounting dapat memiliki ketentuan privasi sendiri di situs masing-masing. Kebijakan ini berlaku untuk situs ${site.domain} dan alat internal Sissi.`,
+        ],
+      },
+      {
+        title: "Integrasi Google",
+        body: [
+          "Alat internal kami, Sissi Backup (bagian dari Sissi Admin), hanya mengakses Google Drive milik Sissi sendiri untuk menyimpan cadangan terenkripsi dari sistem milik Sissi. Alat ini tidak mengakses data Google milik orang lain.",
+          "Data yang diterima dari Google API tidak dijual, tidak dipakai untuk iklan, dan tidak dibagikan kepada pihak lain.",
+        ],
+        note: {
+          before: "Penggunaan dan pengalihan informasi yang diterima dari Google API mematuhi ",
+          label: "Google API Services User Data Policy",
+          href: "https://developers.google.com/terms/api-services-user-data-policy",
+          after: ", termasuk persyaratan Limited Use.",
+        },
+      },
+      {
+        title: "Hak Anda",
+        body: [
+          `Anda dapat meminta akses, koreksi, atau penghapusan data Anda dengan menghubungi kami lewat email ${site.email} atau WhatsApp ${site.phoneDisplay}.`,
+        ],
+      },
+      {
+        title: "Keamanan",
+        body: ["Kami menerapkan langkah pengamanan yang wajar, termasuk enkripsi dan pembatasan akses data hanya untuk tim kami."],
+      },
+      {
+        title: "Perubahan kebijakan",
+        body: ["Bila kebijakan ini berubah, versi terbarunya kami muat di halaman ini dengan tanggal pembaruan yang baru."],
+      },
+    ] satisfies LegalSection[] as LegalSection[],
   },
 };

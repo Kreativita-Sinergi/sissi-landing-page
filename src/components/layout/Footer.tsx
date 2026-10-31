@@ -3,7 +3,8 @@ import { site, type Dictionary } from "@/content";
 import { Container } from "@/components/shared/Container";
 import { Logo } from "@/components/shared/Logo";
 
-export function Footer({ t }: { t: Dictionary["footer"] }) {
+/** `home` = alamat beranda bila footer dipakai di luar beranda, agar tautan "#section" tetap menuju beranda. */
+export function Footer({ t, home = "" }: { t: Dictionary["footer"]; home?: string }) {
   return (
     <footer className="bg-ink text-on-dark">
       <Container className="grid gap-12 py-16 md:grid-cols-[1.4fr_1fr_1fr_1.3fr]">
@@ -19,10 +20,11 @@ export function Footer({ t }: { t: Dictionary["footer"] }) {
             <ul className="mt-4 space-y-2.5">
               {col.links.map((l) => {
                 const external = l.href.startsWith("http");
+                const href = l.href.startsWith("#") ? `${home}${l.href}` : l.href;
                 return (
                   <li key={l.href}>
                     <a
-                      href={l.href}
+                      href={href}
                       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                       className="text-sm text-on-dark transition-colors hover:text-brand"
                     >
@@ -59,10 +61,15 @@ export function Footer({ t }: { t: Dictionary["footer"] }) {
         <p>
           © {site.year} {site.company}. {t.rights}
         </p>
-        <a href="#" className="inline-flex items-center gap-1.5 transition-colors hover:text-on-dark">
-          {t.backToTop}
-          <ArrowUp className="size-3.5" />
-        </a>
+        <div className="flex items-center gap-6">
+          <a href={t.privacy.href} className="transition-colors hover:text-on-dark">
+            {t.privacy.label}
+          </a>
+          <a href="#" className="inline-flex items-center gap-1.5 transition-colors hover:text-on-dark">
+            {t.backToTop}
+            <ArrowUp className="size-3.5" />
+          </a>
+        </div>
       </Container>
     </footer>
   );

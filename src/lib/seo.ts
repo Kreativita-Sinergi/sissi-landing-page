@@ -3,12 +3,12 @@
  * Semua statis (tanpa `new Date()`) karena halaman diprerender.
  */
 import type { Metadata } from "next";
-import { getDictionary, homePath, locales, ogLocale, site, type Locale } from "@/content";
+import { getDictionary, homePath, locales, ogLocale, privacyPath, site, type Locale } from "@/content";
 
 export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://sissi.id").replace(/\/+$/, "");
 
 /** Tanggal terakhir isi diperbarui (sitemap). Ubah saat teks berubah. */
-export const contentUpdated = "2026-10-30";
+export const contentUpdated = "2026-11-01";
 
 /** Peta hreflang → alamat; x-default = bahasa bawaan. */
 export const languageAlternates = {
@@ -36,6 +36,22 @@ export function homeMetadata(locale: Locale): Metadata {
       description: t.description,
     },
     twitter: { card: "summary_large_image", title: t.title, description: t.description },
+  };
+}
+
+/** Halaman kebijakan privasi: canonical + hreflang ke versi bahasa lain. */
+export function privacyMetadata(locale: Locale): Metadata {
+  const t = getDictionary(locale).privacy.meta;
+  return {
+    metadataBase: new URL(siteUrl),
+    title: t.title,
+    description: t.description,
+    applicationName: site.brand,
+    authors: [{ name: site.company }],
+    alternates: {
+      canonical: privacyPath(locale),
+      languages: { ...Object.fromEntries(locales.map((l) => [l, privacyPath(l)])), "x-default": privacyPath("id") },
+    },
   };
 }
 

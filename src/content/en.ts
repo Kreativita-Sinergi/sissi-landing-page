@@ -336,5 +336,77 @@ export const en: Dictionary = {
     contactTitle: "Contact",
     rights: "All rights reserved.",
     backToTop: "Back to top",
+    privacy: { label: "Privacy policy", href: "/en/privacy" },
+  },
+
+  privacy: {
+    meta: {
+      title: "Privacy policy | Sissi Kreatif Teknologi",
+      description:
+        "How Sissi Kreatif Teknologi handles data on the sissi.id website, project client data, and Sissi's internal tools, including the Google Drive integration.",
+    },
+    back: "Back to home",
+    eyebrow: "Privacy",
+    title: "Privacy policy",
+    updated: "Last updated: 1 November 2026",
+    intro: "This policy explains what data we receive, what we use it for, and how to contact us about your data.",
+    sections: [
+      {
+        title: "Who we are",
+        body: [
+          `The ${site.domain} website is operated by ${site.company}, ${site.city}, ${site.region}, Indonesia.`,
+          `Email: ${site.email} · WhatsApp: ${site.phoneDisplay}`,
+        ],
+      },
+      {
+        title: "The sissi.id website",
+        body: [
+          "This website has no accounts or login. We do not use analytics, advertising, or tracking cookies.",
+          "The project request form does not send data to our server. It only composes a message, which you send yourself via WhatsApp or email. We receive only what you send.",
+          "Our hosting provider (Vercel) may process technical logs, such as IP addresses and browser information, for security and to operate the service.",
+        ],
+      },
+      {
+        title: "Project client data",
+        body: [
+          "Information you provide for a project (contact details, business information, and files) is used only to deliver the project and to communicate with you.",
+          "We do not sell your data. It is shared only with service providers needed to deliver the project (for example, hosting) or when required by law.",
+          "Data is kept for as long as it is needed for the project and to meet legal and accounting obligations.",
+        ],
+      },
+      {
+        title: "Other Sissi apps",
+        body: [
+          `Sissi Kasir, Sissi Booth, and Sissi Accounting may have their own privacy terms on their respective websites. This policy covers the ${site.domain} website and Sissi's internal tools.`,
+        ],
+      },
+      {
+        title: "Google integration",
+        body: [
+          "Our internal tool, Sissi Backup (part of Sissi Admin), accesses only Sissi's own Google Drive to store encrypted backups of Sissi's own systems. It does not access anyone else's Google data.",
+          "Data received from Google APIs is not sold, not used for advertising, and not shared with others.",
+        ],
+        note: {
+          before: "Use and transfer of information received from Google APIs adheres to the ",
+          label: "Google API Services User Data Policy",
+          href: "https://developers.google.com/terms/api-services-user-data-policy",
+          after: ", including the Limited Use requirements.",
+        },
+      },
+      {
+        title: "Your rights",
+        body: [
+          `You can request access to, correction of, or deletion of your data by contacting us at ${site.email} or on WhatsApp at ${site.phoneDisplay}.`,
+        ],
+      },
+      {
+        title: "Security",
+        body: ["We take reasonable security measures, including encryption and limiting data access to our team."],
+      },
+      {
+        title: "Changes to this policy",
+        body: ["If this policy changes, we will post the updated version on this page with a new date."],
+      },
+    ],
   },
 };

@@ -1,8 +1,18 @@
 import { homePath, localeLabel, localeName, locales, type Locale } from "@/content/locales";
 import { cn } from "@/components/shared/cn";
 
-/** Pilihan bahasa: tautan biasa ke beranda versi bahasa lain (halaman statis per bahasa). */
-export function LanguageSwitch({ current, label, className }: { current: Locale; label: string; className?: string }) {
+/** Pilihan bahasa: tautan biasa ke versi bahasa lain (halaman statis per bahasa); bawaan = beranda. */
+export function LanguageSwitch({
+  current,
+  label,
+  className,
+  pathFor = homePath,
+}: {
+  current: Locale;
+  label: string;
+  className?: string;
+  pathFor?: (locale: Locale) => string;
+}) {
   return (
     <nav aria-label={label} className={cn("flex items-center rounded-full border border-line-strong p-0.5", className)}>
       {locales.map((l) => {
@@ -10,7 +20,7 @@ export function LanguageSwitch({ current, label, className }: { current: Locale;
         return (
           <a
             key={l}
-            href={homePath(l)}
+            href={pathFor(l)}
             hrefLang={l}
             lang={l}
             title={localeName[l]}

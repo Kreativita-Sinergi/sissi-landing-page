@@ -6,6 +6,9 @@ export const defaultLocale: Locale = "id";
 /** Alamat beranda per bahasa: bahasa bawaan tanpa awalan. */
 export const homePath = (locale: Locale) => (locale === defaultLocale ? "/" : `/${locale}`);
 
+/** Alamat kebijakan privasi per bahasa (keputusan pemilik: slug bahasa Inggris di semua bahasa). */
+export const privacyPath = (locale: Locale) => (locale === defaultLocale ? "/privacy" : `/${locale}/privacy`);
+
 export const localeLabel: Record<Locale, string> = { id: "ID", en: "EN" };
 export const localeName: Record<Locale, string> = { id: "Bahasa Indonesia", en: "English" };
 export const htmlLang: Record<Locale, string> = { id: "id", en: "en" };

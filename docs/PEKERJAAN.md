@@ -3,13 +3,13 @@
 > **Dokumen hidup.** Agent/kontributor WAJIB membacanya di awal sesi dan memperbaruinya di akhir sesi.
 > Hanya lokal di repo ini.
 
-Terakhir diperbarui: **2026-10-30** · oleh: Claude Opus 5.5 (hapus "PT.")
+Terakhir diperbarui: **2026-11-01** · oleh: Claude Opus 5.5 (kebijakan privasi)
 
 ## Menunggu reviu sebelum merge
 
 | Cabang | Ringkasan | Cara verifikasi | Risiko / catatan | Dibuat |
 |---|---|---|---|---|
-| _(kosong)_ | | | | |
+| `privasi` (lokal, belum di-push) | Halaman kebijakan privasi `/privacy` (ID) & `/en/privacy` (EN) untuk layar persetujuan OAuth Google Cloud (Sissi Backup / Sissi Admin). Teks di kamus `privacy`; tautan di footer; sitemap + canonical/hreflang; `metadataBase` di root layout (OG halaman anak). | `scripts/exclusive.sh npm run lint` & `env -u NODE_ENV scripts/exclusive.sh npm run build`; buka `/privacy` & `/en/privacy` | **Teks legal publik: pemilik wajib menyetujui isi** sebelum merge/push. Klaim: tanpa analitik/cookie, formulir tanpa server, Vercel memproses log teknis, Google Drive hanya milik Sissi. Bila analitik dipasang kelak, halaman ini wajib diubah. | 2026-11-01 |
 
 ## Sedang dikerjakan
 
@@ -27,8 +27,6 @@ _(kosong)_
 
 - [ ] **P2 · Tinjau terjemahan Inggris** — `src/content/en.ts` ditulis Claude; minta penutur fasih memeriksa, terutama
   FAQ "Do you work with clients outside Indonesia? … in English or Indonesian" (klaim layanan berbahasa Inggris).
-- [ ] **P3 · Peringatan build `metadataBase`** — muncul dari 404 bawaan Next (`/_not-found`), semua halaman kita sudah
-  memasang `metadataBase`; tidak berdampak, abaikan atau periksa saat Next diperbarui.
 - [ ] **P1 · Lisensi foto hero** — `public/hero/orang-buku.webp` dari file yang diberikan pemilik; nama filenya mirip
   foto stok Freepik. Pastikan lisensinya (Freepik gratis mewajibkan atribusi; premium tidak). Bila perlu atribusi,
   tambahkan di footer.
@@ -38,12 +36,19 @@ _(kosong)_
 - [ ] **P3 · Tangkapan layar portofolio diperbarui** — `public/products/site-*.jpg` diambil 2026-10-14 (madeart: 2026-10-17) dari situs
   langsung (Chrome headless 1440×900). Ambil ulang bila situsnya berubah besar.
 - [ ] **P3 · Analitik** — belum ada (CSP saat ini hanya `'self'`; tambahkan domain analitik ke CSP bila dipasang).
+  **Bila dipasang, perbarui juga kebijakan privasi** (`privacy` di `id.ts`/`en.ts`, tanggal, `contentUpdated`).
 
 ## Keputusan terbuka (butuh pemilik)
 
 _(kosong)_
 
 ## Selesai (terbaru di atas)
+
+- **2026-11-01 · Kebijakan privasi (S; Claude Opus 5.5; permintaan pemilik, cabang `privasi`, menunggu reviu)** —
+  Google Cloud OAuth meminta URL kebijakan privasi. Alamat berbahasa Inggris di kedua bahasa (keputusan pemilik):
+  `/privacy` & `/en/privacy` (`privacyPath` di `locales.ts`). `LanguageSwitch` menerima `pathFor`; `Footer` menerima
+  `home` agar tautan "#section" menuju beranda. Peringatan build `metadataBase` hilang setelah `metadataBase`
+  dipasang di kedua root layout (sebelumnya OG `/privacy` menunjuk `localhost:3000`).
 
 - **2026-10-30 · Next.js 16.4.0 → 16.4.3 (S; Claude Opus 5.5; advisori keamanan)** — `next` & `eslint-config-next`
   tepat 16.4.3, `experimental.agentUpgrade: "security"`. Lint, build, dan `next start` lolos. Build gagal di
